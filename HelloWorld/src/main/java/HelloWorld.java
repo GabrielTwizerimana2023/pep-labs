@@ -1,15 +1,12 @@
+//reimport java.util.Scanner;
 
-public class HelloWorld {
+class HelloWorld {
+ 
     public static void main(String [] args) {
-        System.out.println("Hello, World");
+    /*Scanner jx = new Scanner(System.in);
+            System.out.println("Username:");
+            String username=jx.next();*/
+            System.out.println("Hello Wolrd");
+        }
+        
     }
-    /**
-     * This method must return a hello world String, instead of returning "change me".
-     * A test case will check if the behavior is as expected.
-     * You can use the test results to check for differences.
-     * @return "Hello, world!"
-     */
-    public String sayHello(){
-        return "change me";
-    }
-}
