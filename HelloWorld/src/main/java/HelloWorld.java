@@ -1,7 +1,7 @@
 
 public class HelloWorld {
     public static void main(String [] args) {
-        System.out.println("Hello World");
+        System.out.println("Hello, World");
     }
     /**
      * This method must return a hello world String, instead of returning "change me".
