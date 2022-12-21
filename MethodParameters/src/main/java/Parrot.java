@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Parrot {
     /**
      * This method should return whatever String was passed into it by whatever invoked it (in this case, the test),
@@ -12,24 +10,17 @@ public class Parrot {
      * @param text is a parameter passed into this method by whatever called it.
      * @return text.
      */
-    
-     String copy(String text){
-       
+    public static void main(String [] args){
+        Parrot sc=new Parrot();
+        String x=sc.copy("hello");
+        String y=sc.parrot("polly");
+        System.out.println(x);
+        System.out.println(y);
+    }
+    public String copy(String hi){
         return "hello";
-
     }
-    static String copy1(String text){
-       
+    public String parrot(String n){
         return "polly";
-
     }
-    public static void main(String[] args){ 
-       Parrot sc=new Parrot();
-          String a=sc.copy("hello");
-          /*String b=sc.copy1("polly");*/
-        
-            System.out.println(a);
-          
-        }
-        
-        } 
+}
