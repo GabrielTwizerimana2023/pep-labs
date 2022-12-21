@@ -18,6 +18,11 @@ public class Parrot {
         return "hello";
 
     }
+    static String copy1(String text){
+       
+        return "polly";
+
+    }
     public static void main(String[] args){ 
         Scanner sc=new Scanner(System.in);
         System.out.println("insert anything!!");
