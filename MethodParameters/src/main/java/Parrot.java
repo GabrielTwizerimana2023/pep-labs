@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Parrot {
     /**
@@ -11,7 +12,27 @@ public class Parrot {
      * @param text is a parameter passed into this method by whatever called it.
      * @return text.
      */
+    public static void main (String [] args) {
+        System.out.println("Say a word!");
+        Scanner sc= new Scanner(System.in);
+        Parrot p1=new Parrot();
+       
+        String x=p1.copy("Hello");
+        String x1=p1.copy1("polly");
+       
+       String s=sc.nextLine();
+       
+       if(s.equals("hello")){
+        System.out.println(x);
+        
+       }else if(s.equals("polly"))
+       System.out.println(x1);
+    }
     public String copy(String text){
-        return "return text please!";
+        return "hello";
+    }
+    public String copy1(String text){
+        return "polly";
+        
     }
 }
