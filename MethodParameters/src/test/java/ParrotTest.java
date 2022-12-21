@@ -12,17 +12,17 @@ public class ParrotTest {
     public void parrotTestHello(){
         String input = "hello";
         String expected = "hello";
-        String actual = p.copy(input);
+        String actual = p.copy("hello");
         Assert.assertEquals(expected, actual);
     }
     /**
      * If p.copy is passed "polly", it should return "polly".
      */
     @Test
-    public void parrotTestPolly(){
+    public void parrotTestPolly(String ParrotTest){
         String input = "polly";
         String expected = "polly";
-        String actual = p.copy(input);
+        String actual = p.copy("polly");
         Assert.assertEquals(expected, actual);
     }
 }

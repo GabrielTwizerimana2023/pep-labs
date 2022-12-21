@@ -13,7 +13,7 @@ public class Parrot {
      * @return text.
      */
     
-     static String copy(String text){
+     String copy(String text){
        
         return "hello";
 
@@ -24,15 +24,12 @@ public class Parrot {
 
     }
     public static void main(String[] args){ 
-        Scanner sc=new Scanner(System.in);
-        System.out.println("insert anything!!");
-        String c1=sc.nextLine();
-        if(c1.equals("polly")){
-            String k=copy(c1);
-            System.out.println(k);
+       Parrot sc=new Parrot();
+          String a=sc.copy("hello");
+          /*String b=sc.copy1("polly");*/
+        
+            System.out.println(a);
+          
         }
-        else{
-            System.out.println("Invalid");
-        }
+        
         } 
-}
