@@ -13,10 +13,14 @@ public class CombineStrings {
         CombineStrings cs=new CombineStrings();
         String a="abc";
         String b="xyz";
+        String d="123";
+        String e="456";
         String c=a+b;
+        String f=d+e;
         cs.combine("abc", "xyz");
         cs.combine("123", "456");
         System.out.println(c);
+        System.out.println(f);
         }
     public String combine(String x, String y){
         if (x=="abc" && y=="xyz"){
