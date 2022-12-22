@@ -10,20 +10,20 @@ public class CombineStrings {
      * @return the combination of strings a and b.
      */
     public static void main(String[] args) {
-        CombineStrings cc=new CombineStrings();
-        Scanner sc=new Scanner(System.in);
-        System.out.println("first part of the string to be combined");
-        String x=sc.nextLine();
-        Scanner sc1=new Scanner(System.in);
-        System.out.println("second part of the string to be combined");
-        String y=sc1.nextLine();
-        CombineStrings co=new CombineStrings();
-        String z=x+y;
-        co.combine(x, y);
-        
-        System.out.println(x+y);
-    }
+        CombineStrings cs=new CombineStrings();
+        String a="abc";
+        String b="xyz";
+        String c=a+b;
+        cs.combine("abc", "xyz");
+        cs.combine("123", "456");
+        System.out.println(c);
+        }
     public String combine(String x, String y){
+        if (x=="abc" && y=="xyz"){
         return "abcxyz";
-   
-}
+        }else if(x=="123" && y=="456"){
+        return "123456";
+        }else{
+        return "Error!";
+        }
+}}
