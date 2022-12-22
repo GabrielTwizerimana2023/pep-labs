@@ -1,4 +1,5 @@
 
+import java.util.Scanner;
 public class IfStatement {
     /**
      * An if statement uses a conditional statement (within parentheses) to determine if the code
@@ -16,7 +17,22 @@ public class IfStatement {
      * @param y second number to be compared.
      * @return x if bool is true. if bool is false, return y.
      */
-    public int ifExample(boolean bool, int x, int y){
-        return 0;
+    public static void main(String [] args){
+        IfStatement cs=new IfStatement();
+        int x=0;
+        int y=1;
+        cs.ifExample(true, x, y);
+        System.out.println(x);
+        cs.ifExample(false, x, y);
+        System.out.println(y);
     }
-}
+    public int ifExample(boolean bool, int x, int y){
+        if(bool == true){
+        return x;
+        } else if(bool== false){
+            return y;
+        }
+        else{
+            return 0;
+        }
+}}
