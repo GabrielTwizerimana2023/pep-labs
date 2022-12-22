@@ -9,6 +9,9 @@
  * NOTE: All of these problems can be solved with one line with boolean operators.
  */
 public class Expressions {
+    public static void main(String [] args){
+        
+    }
     /**
      * @param b a true/false value.
      * @return if b is true, return true. if b is false, return false.
