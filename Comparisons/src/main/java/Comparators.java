@@ -1,3 +1,6 @@
+import java.util.Scanner;
+import java.lang.Boolean;
+import javax.swing.text.StyledEditorKit.BoldAction;
 
 /**
  * If we want to make programs that "do something", we're going to need to create instructions that change
@@ -7,6 +10,7 @@
  * 
  * Additional Resource if needed: https://www.oreilly.com/library/view/java-for-dummies/9781118239742/a17.html
  */
+
 public class Comparators {
     /**
      * @param a the first number to be compared.
@@ -58,4 +62,44 @@ public class Comparators {
     public boolean notEqualTo(int a, int b){
         return false;
     }
-}
+    public static void main(String [] args){
+     Comparators x=new Comparators();
+     Scanner sc= new Scanner(System.in);
+     System.out.println("The first number to be compared");
+     int x1=sc.nextInt();
+     System.out.println("The second number to be compared");
+     int x2=sc.nextInt();
+    
+     x.con1(x1,x2);
+     System.out.println(x.con1(x1,x2));
+    }
+    
+    public  Boolean con1(int a, int b) {
+        if (a==b){
+        return true;
+        }
+        else if(a>b){
+            return true;
+        }
+        else if(a<b){
+            return true;
+        }
+        else if(a>=b){
+            return true;
+        }
+        else if(a<=b){
+            return true;
+        }
+        else if(a!=b){
+            return true;
+        }else{
+            return false;
+        }
+    }}
+        
+        
+/**
+ * @param 
+ * @param 
+ * @return 
+ */
