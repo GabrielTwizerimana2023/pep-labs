@@ -199,7 +199,7 @@ public class ComparatorsTest {
         int a = 1;
         int b = 2;
         boolean expected = true;
-        boolean actual = c.notEqualTo(a, b);
+        boolean actual = c.notEqualTo(1, 2);
         Assert.assertEquals(expected, actual);
     }
 }

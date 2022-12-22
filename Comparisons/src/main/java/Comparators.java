@@ -1,3 +1,6 @@
+import java.util.Scanner;
+import java.lang.Boolean;
+import javax.swing.text.StyledEditorKit.BoldAction;
 
 /**
  * If we want to make programs that "do something", we're going to need to create instructions that change
@@ -7,6 +10,7 @@
  * 
  * Additional Resource if needed: https://www.oreilly.com/library/view/java-for-dummies/9781118239742/a17.html
  */
+
 public class Comparators {
     /**
      * @param a the first number to be compared.
@@ -14,16 +18,24 @@ public class Comparators {
      * @return true if a is equal to b, false otherwise.
      */
     public boolean isEqual(int a, int b){
-        return false;
+        if(a==b){
+        return true;
     }
-
+    else{
+    return false;
+    }}
     /**
      * @param a the first number to be compared.
      * @param b the second number to be compared.
      * @return true if a is greater than b, false otherwise.
      */
     public boolean greaterThan(int a, int b){
+        if(a>b){
+            return true;
+        }
+        else{
         return false;
+        }
     }
     /**
      * @param a the first number to be compared.
@@ -31,7 +43,12 @@ public class Comparators {
      * @return true if a is less than b, false otherwise.
      */
     public boolean lessThan(int a, int b){
+        if(a<b){
+            return true;
+        }
+        else{
         return false;
+        }
     }
     /**
      * @param a the first number to be compared.
@@ -39,7 +56,12 @@ public class Comparators {
      * @return true if a is greater than or equal to b, false otherwise.
      */
     public boolean greaterThanOrEqualTo(int a, int b){
+        if(a>=b){
+            return true;
+        }
+        else{
         return false;
+        }
     }
     /**
      * @param a the first number to be compared.
@@ -47,7 +69,12 @@ public class Comparators {
      * @return true if a is less than or equal to b, false otherwise.
      */
     public boolean lessThanOrEqualTo(int a, int b){
+        if(a<=b){
+            return true;
+        }
+        else{
         return false;
+        }
     }
 
     /**
@@ -56,6 +83,40 @@ public class Comparators {
      * @return true if a is not equal to b, false otherwise.
      */
     public boolean notEqualTo(int a, int b){
+        if(a!=b){
+            return true;
+        }
+        else{
         return false;
+        }
     }
-}
+    public static void main(String [] args){
+     Comparators x=new Comparators();
+     Scanner sc= new Scanner(System.in);
+     System.out.println("The first number to be compared");
+     int x1=sc.nextInt();
+     System.out.println("The second number to be compared");
+     int x2=sc.nextInt();
+    
+     x.isEqual(x1,x2);
+     System.out.println(x.isEqual(x1,x2));
+     x.greaterThan(x1, x2);
+     System.out.println(x.greaterThan(x1,x2));
+     x.lessThan(x1, x2);
+     System.out.println(x.lessThan(x1,x2));
+     x.greaterThanOrEqualTo(x1, x2);
+     System.out.println(x.greaterThanOrEqualTo(x1,x2));
+     x.lessThanOrEqualTo(x1, x2);
+     System.out.println(x.lessThanOrEqualTo(x1,x2));
+     x.notEqualTo(x1, x2);
+     System.out.println(x.notEqualTo(x1,x2));
+    }
+    
+    }
+        
+        
+/**
+ * @param 
+ * @param 
+ * @return 
+ */
