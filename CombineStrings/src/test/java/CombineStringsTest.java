@@ -26,4 +26,5 @@ public class CombineStringsTest {
         String actual = cs.combine(input1, input2);
         Assert.assertEquals(expected,actual);
     }
+  
 }
