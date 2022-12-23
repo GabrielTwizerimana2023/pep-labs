@@ -14,12 +14,12 @@ public class Expressions {
        Expressions sc=new Expressions();
        sc.returnBoolean(true);
       System.out.println(sc.returnBoolean(true)); 
-      sc.returnBoolean1(false);
-      System.out.println(sc.returnBoolean1(false)); 
+      sc.returnBoolean(false);
+      System.out.println(sc.returnBoolean(false)); 
       sc.returnNot(false);
       System.out.println(sc.returnNot(false));
-      sc.returnNot1(true);
-      System.out.println(sc.returnNot1(true));
+      sc.returnNot(false);
+      System.out.println(sc.returnNot(true));
       sc.returnAnd(true, true);
       System.out.println(sc.returnAnd(true, true));
       sc.returnAnd(false, true);
@@ -40,8 +40,12 @@ public class Expressions {
      * @return if b is true, return true. if b is false, return false.
      */
     public boolean returnBoolean(boolean b){
-        b=true;
-        return b;
+        if(b==true){
+            return true;
+            }
+            else{
+                return false;
+            }
         
     }
     public boolean returnBoolean1(boolean b){
@@ -55,12 +59,12 @@ public class Expressions {
      * look into boolean operations to do this without using if/else statements.
      */
     public boolean returnNot(boolean b){
-        b=true;
+        if(b==true){
         return false;
-    }
-    public boolean returnNot1(boolean b){
-        b=false;
-        return true;
+        }
+        else{
+            return true;
+        }
     }
     
 
