@@ -22,8 +22,10 @@ public class Subtract {
         System.out.println("Enter a");
         Double c=sc.nextDouble();
         System.out.println("Enter b");
-        Double d=sc.nextDouble();
+        Scanner bd=new Scanner(System.in);
+        Double d=bd.nextDouble();
         x.sub(0, 0);
+        System.out.println(c-d);
     }
     public double sub(double a, double b){
 
