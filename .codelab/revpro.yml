@@ -40,12 +40,12 @@
     :git_user_name: Gabriel Twizerimna
 :progress:
   :count_labs_total: 96
-  :count_labs_passed: 1
+  :count_labs_passed: 0
   :count_tests_total: 361
-  :count_tests_passed: 3
+  :count_tests_passed: 0
 :progress_test:
   :count_tests_total: 361
-  :count_tests_passed: 3
+  :count_tests_passed: 0
   Start:
     :Week: 1
     :Order: 1
@@ -156,11 +156,14 @@
     :Order: 10
     :Type: challenge
     :count_tests: 3
-    :count_tests_passed: 3
+    :count_tests_passed: 0
     :tests:
       greaterOrLesserTest1: 1
       greaterOrLesserTest2: 1
       greaterOrLesserTest3: 1
+      subTest1: 0
+      subTest2: 0
+      subTest3: 0
   IntroToOOP:
     :Week: 2
     :Order: 1
