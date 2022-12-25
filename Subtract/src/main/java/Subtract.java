@@ -24,11 +24,10 @@ public class Subtract {
         System.out.println("Enter b");
         Scanner bd=new Scanner(System.in);
         Double d=bd.nextDouble();
-        x.sub(0, 0);
-        System.out.println(c-d);
+        x.sub(c,d);
+        System.out.println( x.sub(c, d));
     }
     public double sub(double a, double b){
-     
-        return a-b;
+     return a-b;
     }
 }
