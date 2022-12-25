@@ -28,7 +28,7 @@ public class Subtract {
         System.out.println(c-d);
     }
     public double sub(double a, double b){
-
+     
         return a-b;
     }
 }
