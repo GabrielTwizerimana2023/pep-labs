@@ -1,4 +1,6 @@
 
+import java.util.Scanner;
+
 public class Subtract {
     /**
      * Let's say we're building a calculator app. We now want to subtract a decimal number from another decimal number.
@@ -14,7 +16,17 @@ public class Subtract {
      * @param b some decimal number
      * @return a minus b
      */
+    public static void main(String [] args){
+        Subtract x=new Subtract();
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a");
+        Double c=sc.nextDouble();
+        System.out.println("Enter b");
+        Double d=sc.nextDouble();
+        x.sub(0, 0);
+    }
     public double sub(double a, double b){
-        return 0;
+
+        return a-b;
     }
 }
