@@ -1,4 +1,6 @@
 
+
+import java.util.Scanner;
 /**
  * 
  * Problem:
@@ -32,7 +34,7 @@ public class Bird {
      * A variable (in this context, often referred to as a field), which represents the age of the bird.
      */
     public int ageMonths;
-
+    
     /**
      * A constructor for the bird class: this method allows us to build a new bird with the 'new' keyword.
      * No need to change anything here, for now.
@@ -44,8 +46,24 @@ public class Bird {
      * @return "Tweet" if ageMonths is less than 3 and "Chirp" if ageMonths is
      *  * greater than or equal to 3.
      */
-    public String sound(){
-        return "";
-    }
 
+     public static void main(String [] argrs){
+        Bird b1=new Bird();
+    
+       if(b1.ageMonths<3);
+        b1.sound="Tweet";
+        if(b1.ageMonths>=3);
+        b1.sound="Tweet";
+            Scanner sc=new Scanner(System.in);
+            System.out.println("Enter AgeMonth of a bird");
+            int ageMonths=sc.nextInt();
+            b1.sound();
+            System.out.println(b1.sound());
+     }
+    
+public String sound(){
+    return "";
+    
+       }
+       
 }
