@@ -1,6 +1,7 @@
 
 
 import java.util.Scanner;
+import java.lang.String;
 /**
  * 
  * Problem:
@@ -48,22 +49,27 @@ public class Bird {
      */
 
      public static void main(String [] argrs){
+       
         Bird b1=new Bird();
-    
-       if(b1.ageMonths<3);
-        b1.sound="Tweet";
-        if(b1.ageMonths>=3);
-        b1.sound="Tweet";
-            Scanner sc=new Scanner(System.in);
-            System.out.println("Enter AgeMonth of a bird");
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter AgeMonth of a bird");
             int ageMonths=sc.nextInt();
-            b1.sound();
+        
+        b1.sound();
+          
             System.out.println(b1.sound());
      }
     
 public String sound(){
-    return "";
-    
+    Integer s=Integer.valueOf((ageMonths));
+      if(s<3){
+    return "Tweet";
        }
-       
+       else if(s>=3){
+        return "Chirp";
+       }
+       else{
+        return "error!";
+       }
+}
 }
