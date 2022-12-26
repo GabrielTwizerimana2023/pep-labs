@@ -53,7 +53,7 @@ public class Bird {
         Bird b1=new Bird();
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter AgeMonth of a bird");
-            int ageMonths=sc.nextInt();
+            int input=sc.nextInt();
         
         b1.sound();
           
@@ -62,14 +62,15 @@ public class Bird {
     
 public String sound(){
     Integer s=Integer.valueOf((ageMonths));
-      if(s<3){
+    if(s>3){
     return "Tweet";
        }
-       else if(s>=3){
+    if(s<=3){
         return "Chirp";
        }
-       else{
+    else{
         return "error!";
        }
 }
+
 }
