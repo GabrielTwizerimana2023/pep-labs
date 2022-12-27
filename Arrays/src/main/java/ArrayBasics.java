@@ -72,13 +72,8 @@ public class ArrayBasics {
      * @return a new int array that can contain n elements.
      */
     public int[] returnNewArraySizeN(int n){
-        int age[]=new int[5];
-        age[0]=4;
-        age[1]=7;
-        age[2]=3;
-        age[3]=2;
-        age[4]=6;
-
+        int numbers[]={2,4,5,1,6};
+        for(int i=0;i<numbers.length;i++);
         return new int[n];
     }
 }
