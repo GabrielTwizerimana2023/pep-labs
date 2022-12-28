@@ -36,21 +36,22 @@ public class WhileLoop {
      *
      **/
     public static void main(String [] args){
-        
+        WhileLoop y=new WhileLoop();
         int sum=0;
         int i=0;
-        WhileLoop y=new WhileLoop();
+        
         System.out.println("Enter an integer for sum computation purpose");
         Scanner sc=new Scanner(System.in);
-        int x=sc.nextInt();
+        int a=sc.nextInt();
          
-        while(i<x){
-          
+        while(i<a){
+         
        sum=sum+i;
        i++;
+       
         } 
-        System.out.println(x);
-        System.out.println(y.whileExample(x));
+        System.out.println("number is "+a);
+        System.out.println("Sum of a number is "+y.whileExample(a));
     }
     public int whileExample(int end){
         int sum = 0;
