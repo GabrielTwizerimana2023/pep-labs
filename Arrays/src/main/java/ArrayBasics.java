@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 /**
  * An array is a group of some predefined number of elements.
@@ -14,10 +15,24 @@ public class ArrayBasics {
      * @param arr the array we're getting data from.
      * @return the length of arr.
      */
-    public int getLengthOfArray(int[] arr){
-        return 0;
-    }
+    int val;
+   
 
+    public static void main(String [] arags){
+        int[] arr={1,2,3,4,7,7,10};
+        ArrayBasics y=new ArrayBasics();
+        
+        y.getLengthOfArray(arr);
+        System.out.println(y.getLengthOfArray(arr));
+        y.getNthElementOfArray(arr, 2);
+        System.out.println(y.getNthElementOfArray(arr, 2));
+        y.returnNewArraySizeN(7);
+        System.out.println( y.returnNewArraySizeN(5));
+    }
+    public int getLengthOfArray(int arr[]){
+   for(int i=0;i<arr.length;i++);
+    return arr.length;
+    }
 
 
     /**
@@ -27,7 +42,9 @@ public class ArrayBasics {
      * @return the element at index n of arr.
      */
     public int getNthElementOfArray(int[] arr, int n){
-        return 0;
+        for(int i=0;i<arr.length;i++);
+    return arr[n];
+    
     }
 
     /**
@@ -39,7 +56,16 @@ public class ArrayBasics {
      * @return nothing. Because of pass-by-reference, any change to the array will be reflected across our java program.
      */
     public void setNthElementOfArray(int[] arr, int n, int val){
-
+        
+       for(int i=0;i<arr.length;i++){
+        
+            if(arr[n]==3){
+                
+                arr[i]=val=7;
+                
+            }
+        }
+        
     }
 
     /**
@@ -47,6 +73,12 @@ public class ArrayBasics {
      * @return a new int array that can contain n elements.
      */
     public int[] returnNewArraySizeN(int n){
-        return new int[n];
-    }
+       
+        int arr[]=new int[n];
+        
+        for(int i=0;i<arr.length;i++){
+            
 }
+return arr;
+       
+}}
