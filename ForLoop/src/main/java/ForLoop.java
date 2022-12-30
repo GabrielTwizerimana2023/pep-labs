@@ -1,4 +1,5 @@
-package Intro_To_Control_Flow.ForLoop;
+
+import java.util.Scanner;
 
 public class ForLoop {
     /**
@@ -39,11 +40,39 @@ public class ForLoop {
      *      @param end the value of i where the for loop should end (provided that the for loop is incremented with i++)
      *      @return the sum of all numbers between start and end, with start inclusive and end exclusive.
      */
+    public static void main(String [] args){
+        ForLoop loop=new ForLoop();
+        
+        int sum=0;
+      
+        for(int i=1;i<6;i++){
+           sum=sum+i;
+           loop.returnNumbers(i, sum);
+            System.out.println("\t"+loop.returnNumbers(i, sum));
+           
+        }
+        //System.out.println("sum: "+sum);
+        for(int i=1;i<4;i++){
+            sum=sum+i;
+            System.out.println("\t"+i);
+           
+        }
+       // System.out.println("sum: "+sum);
+        for(int i=3;i<7;i++){
+            sum=sum+i;
+            System.out.println("\t"+i);
+        }
+        //System.out.println("sum: "+sum);
+    }
     public String returnNumbers(int start, int end){
         String buildingString = "";
-
-//        code here
-
-        return buildingString;
+  int sum=0;
+  
+  for(int i=1;i<6;i++){
+    sum=sum+i;
+    
+    }
+    return buildingString = buildingString + sum + " ";
+       
     }
 }
