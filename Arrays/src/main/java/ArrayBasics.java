@@ -93,17 +93,16 @@ public class ArrayBasics {
      */
     public static int[] returnNewArraySizeN(int n){
        
-        int arr[]=new int[n];
+        int arr[]=new int[5];
         for(int i=0;i<arr.length;i++){
-             if(n==arr.length){
+             
                 System.out.println("array was created! "+ arr[i]);
-               }else{
-                System.out.println("Array not created");
-               } 
+               }
+               return arr;
         }
-        return arr;
+       
     }
-        }
+        
         
             
             
