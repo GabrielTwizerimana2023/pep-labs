@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class EvenOrOdd {
     /**
      * Your challenge is to implement a method to determine if an int is even or odd. The method should return
@@ -13,7 +15,21 @@ public class EvenOrOdd {
      * @param n a number.
      * @return a String "Even" if n is even, and "Odd" of in is odd. The test cases are case-sensitive.
      */
-    public String decide(int n){
-        return "";
+    public static void main(String [] args){
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter a number");
+    String num=sc.nextLine();
+    int num1=Integer.parseInt(num);
+    String result=decide(num1);
+    System.out.println(result);
+    }
+    public static String decide(int n){
+       // String buildingstring;
+        if(n%2==0){
+            return "even";
+        }else if(n%2!=0){
+            
+        }
+        return "odd";
     }
 }
