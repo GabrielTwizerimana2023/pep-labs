@@ -42,37 +42,26 @@ public class ForLoop {
      */
     public static void main(String [] args){
         ForLoop loop=new ForLoop();
-        
-        int sum=0;
-      
-        for(int i=1;i<6;i++){
-           sum=sum+i;
-           loop.returnNumbers(i, sum);
-            System.out.println("\t"+loop.returnNumbers(i, sum));
-           
-        }
-        //System.out.println("sum: "+sum);
-        for(int i=1;i<4;i++){
-            sum=sum+i;
-            System.out.println("\t"+i);
-           
-        }
-       // System.out.println("sum: "+sum);
-        for(int i=3;i<7;i++){
-            sum=sum+i;
-            System.out.println("\t"+i);
-        }
-        //System.out.println("sum: "+sum);
+        Scanner sc=new Scanner(System.in);
+        System.out.println("start number");
+        String star=sc.nextLine();
+        int star1=Integer.parseInt(star);
+        System.out.println("end number");
+        String end=sc.nextLine();
+        int end1=Integer.parseInt(end);
+        String result=loop.returnNumbers(star1, end1);
+      System.out.println(result);
     }
     public String returnNumbers(int start, int end){
         String buildingString = "";
-  int sum=0;
-  
-  for(int i=1;i<6;i++){
-    sum=sum+i;
-    
-    }
-    return buildingString = buildingString + sum + " ";
+        int sum=0;
+        for(int i=start;i<end;i++){
+            
+            sum+=i;
+            buildingString =buildingString+i + " ";
        
+        }
+    
+    return buildingString;
     }
 }
