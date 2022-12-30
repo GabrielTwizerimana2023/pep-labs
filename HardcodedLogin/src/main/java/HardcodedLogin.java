@@ -1,5 +1,6 @@
-
+import java.util.Scanner;
 public class HardcodedLogin {
+
     /**
      * This challenge represents a hardcoded login example:
      *
@@ -14,7 +15,25 @@ public class HardcodedLogin {
      * @param password a String that represents a password.
      * @return true if there is a successful login, and false otherwise.
      */
+    public static void main(String [] args){
+        HardcodedLogin logins;
+        logins=new HardcodedLogin();
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter username");
+        String us=sc.nextLine();
+        Scanner sc1=new Scanner(System.in);
+        System.out.println("enter password");
+        String pass=sc1.nextLine();
+        Boolean check=logins.login(us, pass);
+        System.out.println(check);
+        
+    }
     public boolean login(String username, String password){
+        if(username.equals("user") && password.equals("password")){
+            return true;
+        }else if(username.equals("admin") && password.equals("qwerty")){
+            return true;
+        }else
         return false;
     }
 }
