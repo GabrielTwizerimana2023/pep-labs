@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -18,22 +19,26 @@ public class ArrayBasics {
     int val;
    
 
-    public static void main(String [] arags){
-        int[] arr={1,2,3,4,7,7,10};
-        ArrayBasics y=new ArrayBasics();
-        
-        y.getLengthOfArray(arr);
-        System.out.println(y.getLengthOfArray(arr));
-        y.getNthElementOfArray(arr, 2);
-        System.out.println(y.getNthElementOfArray(arr, 2));
-        y.returnNewArraySizeN(7);
-        System.out.println( y.returnNewArraySizeN(5));
+    public static void main(String [] args){
+      ArrayBasics basic;
+      basic=new ArrayBasics();
+      Scanner sc=new Scanner(System.in);
+      System.out.println("input");
+       int value=sc.nextInt();
+      int res=basic.getLengthOfArray(null);
+      System.out.println(res);
+      int res1=basic.getLengthOfArray(null);
+      System.out.println(res1);
+      int[] store;
+      store=returnNewArraySizeN(value);
+      System.out.println(store);
     }
     public int getLengthOfArray(int arr[]){
-   for(int i=0;i<arr.length;i++);
-    return arr.length;
+    int[] myArr={1,2,4,6,7};
+    int size=myArr.length;
+   return size;
     }
-
+    
 
     /**
      * @param arr the array we're getting data from.
@@ -42,8 +47,22 @@ public class ArrayBasics {
      * @return the element at index n of arr.
      */
     public int getNthElementOfArray(int[] arr, int n){
-        for(int i=0;i<arr.length;i++);
-    return arr[n];
+        ArrayList<Integer> number=new ArrayList<>();
+        number.add(3);
+        number.add(6);
+        number.add(5);
+        number.add(8);
+
+        int searrchEle=5;
+        for(int i=0;i<number.size();i++){
+            System.out.println(number.get(i));
+        if(searrchEle==number.get(i)){
+            System.out.println(searrchEle);
+       
+        }
+       
+        }
+        return searrchEle;
     
     }
 
@@ -72,13 +91,22 @@ public class ArrayBasics {
      * @param n the size of the array we wish to create
      * @return a new int array that can contain n elements.
      */
-    public int[] returnNewArraySizeN(int n){
+    public static int[] returnNewArraySizeN(int n){
        
         int arr[]=new int[n];
-        
         for(int i=0;i<arr.length;i++){
+             if(n==arr.length){
+                System.out.println("array was created! "+ arr[i]);
+               }else{
+                System.out.println("Array not created");
+               } 
+        }
+        return arr;
+    }
+        }
+        
             
-}
-return arr;
-       
-}}
+            
+        
+    
+
