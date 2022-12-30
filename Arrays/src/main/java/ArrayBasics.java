@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 /**
  * An array is a group of some predefined number of elements.
@@ -25,8 +26,8 @@ public class ArrayBasics {
         System.out.println(y.getLengthOfArray(arr));
         y.getNthElementOfArray(arr, 2);
         System.out.println(y.getNthElementOfArray(arr, 2));
-        y.returnNewArraySizeN(5);
-        System.out.println(y.returnNewArraySizeN(5));
+        y.returnNewArraySizeN(7);
+        System.out.println( y.returnNewArraySizeN(5));
     }
     public int getLengthOfArray(int arr[]){
    for(int i=0;i<arr.length;i++);
@@ -56,14 +57,14 @@ public class ArrayBasics {
      */
     public void setNthElementOfArray(int[] arr, int n, int val){
         
-       /* for(int i=0;i<arr.length;i++){
+       for(int i=0;i<arr.length;i++){
         
             if(arr[n]==3){
                 
                 arr[i]=val=7;
                 
             }
-        }*/
+        }
         
     }
 
@@ -72,8 +73,16 @@ public class ArrayBasics {
      * @return a new int array that can contain n elements.
      */
     public int[] returnNewArraySizeN(int n){
-        int numbers[]={2,4,5,1,6};
-        for(int i=0;i<numbers.length;i++);
-        return new int[n];
-    }
+        ArrayBasics base;
+        base=new ArrayBasics();
+        int arr[]=new int[n];
+        
+        for(int i=0;i<arr.length;i++){
+           
+     
+
+     
 }
+return arr;
+       
+}}
