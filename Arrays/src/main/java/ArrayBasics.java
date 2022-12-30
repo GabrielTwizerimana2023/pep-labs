@@ -73,15 +73,11 @@ public class ArrayBasics {
      * @return a new int array that can contain n elements.
      */
     public int[] returnNewArraySizeN(int n){
-        ArrayBasics base;
-        base=new ArrayBasics();
+       
         int arr[]=new int[n];
         
         for(int i=0;i<arr.length;i++){
-           
-     
-
-     
+            
 }
 return arr;
        
