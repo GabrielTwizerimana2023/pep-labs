@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class MathClass {
     /**
@@ -19,7 +20,20 @@ public class MathClass {
      *
      * @return return a^b using the pow() method of the Math class.
      */
-    public double mathPow(double a, double b){
-        return 0;
+    public static void main(String[] args){
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter a number");
+    double exp=sc.nextDouble();
+    System.out.println("enter its exponetial number");
+    double exp1=sc.nextDouble();
+    mathPow(exp, exp1);
+    System.out.println(mathPow(exp, exp1));
+    }
+    public static double mathPow(double a, double b){
+        double result=1;
+        for(int i=0;i<b;i++){
+            result*=a; //result=result*a;
+        }
+        return result;
     }
 }
