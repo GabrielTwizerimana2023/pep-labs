@@ -1,6 +1,9 @@
 
 
 import java.util.Scanner;
+
+import javafx.util.converter.IntegerStringConverter;
+
 import java.lang.String;
 /**
  * 
@@ -41,7 +44,7 @@ public class Bird {
      * No need to change anything here, for now.
      */
     public Bird(){
-
+    
     }
     /**
      * @return "Tweet" if ageMonths is less than 3 and "Chirp" if ageMonths is
@@ -53,24 +56,23 @@ public class Bird {
         Bird b1=new Bird();
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter AgeMonth of a bird");
-            int input=sc.nextInt();
-        
-        b1.sound();
-          
-            System.out.println(b1.sound());
+        int input=sc.nextInt();
+       b1.sound();
+       System.out.println(b1.sound());
+       
      }
-    
 public String sound(){
-    Integer s=Integer.valueOf((ageMonths));
-    if(s>3){
+
+    if(ageMonths>=3){
+         return "Chirp";
+      //  System.out.println("Tweet");
+    }else{
     return "Tweet";
-       }
-    if(s<=3){
-        return "Chirp";
-       }
-    else{
-        return "error!";
-       }
+    //System.out.println("Chirp");
+ }
+    
 }
 
 }
+
+
