@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class SetAllArrayElements {
     /**
@@ -22,7 +23,22 @@ public class SetAllArrayElements {
      * @param n number that you will switch all numbers of arr to.
      * @return nothing, because of pass-by-reference, all changes will be reflected in the original array.
      */
-    public void set(int[] arr, int n){
-
+    public static void main(String [] args){
+        SetAllArrayElements saee=new SetAllArrayElements();
+        saee.set(null, 0);
+       // System.out.println( saee.set(null, 0));
+    }
+    public  void set(int[] arr, int n){
+       arr= new int[4];
+       arr[0]=0;
+       arr[1]=0;
+       arr[2]=0;
+       arr[3]=0;
+       n=1;
+    for(int i=1;i<arr.length;i++){
+  Arrays.fill(arr, n);
+  
+     }
+     System.out.println(Arrays.toString(arr));
     }
 }
