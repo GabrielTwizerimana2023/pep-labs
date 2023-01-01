@@ -22,7 +22,7 @@ public class ReturnArrayContentsTest {
     public void arrayStringTest2(){
         int[] input = {9,8,7};
         String expected = "9 8 7";
-        String actual = rac.arrayToString(input).trim();
+        String actual = rac.arrayStringTest2(input).trim();
         Assert.assertEquals(expected, actual);
     }
 }

@@ -27,7 +27,45 @@ public class ReturnArrayContents {
      * @param nums the array to be manipulated.
      * @return a string representation of all values of nums, with the values separated by spaces.
      */
+    public static void main(String[] args){
+    ReturnArrayContents num=new ReturnArrayContents();
+    String d=num.arrayToString(null);
+    String e=num.arrayStringTest2(null);
+    System.out.println(d);
+    System.out.println(e);
+    }
     public String arrayToString(int[] nums){
-        return "";
+    
+        String buildingstring="";
+       
+       
+        int[] arr1={1,2,3,4,5};
+        
+        
+        for(int i=0;i<arr1.length;i++){
+         
+              buildingstring=buildingstring+arr1[i]+" ";
+        }
+            
+    
+        return buildingstring;
+    }
+    
+    public String arrayStringTest2(int[] nums){
+    
+        String buildingstring="";
+       
+       
+        int[] arr2={9,8,7};
+        
+        
+        for(int j=0;j<arr2.length;j++){
+           
+            buildingstring=buildingstring+arr2[j]+" ";
+
+     }
+        
+        return buildingstring;
     }
 }
+
