@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -22,24 +23,50 @@ public class ArrayBasics {
     public static void main(String [] args){
       ArrayBasics basic;
       basic=new ArrayBasics();
-      Scanner sc=new Scanner(System.in);
-      System.out.println("input");
-       int value=sc.nextInt();
-      int res=basic.getLengthOfArray(null);
-      System.out.println(res);
-      int res1=basic.getLengthOfArray(null);
-      System.out.println(res1);
-      int[] store;
-      store=returnNewArraySizeN(value);
-      System.out.println(store);
+      Scanner va=new Scanner(System.in);
+      Scanner va1=new Scanner(System.in);
+
+      basic.getLengthOfArray(null);
+      System.out.println(basic.getLengthOfArray(null));
+      basic.getLengthOfArray1(null);
+      System.out.println(basic.getLengthOfArray1(null));
+      basic.getLengthOfArray1(null);
+      System.out.println(basic.getLengthOfArray1(null));
+      basic.getNthElementOfArray(null, 0);
+      System.out.println(basic.getNthElementOfArray(null, 0));
+      basic.getNthElementOfArray1(null, 0);
+      System.out.println(basic.getNthElementOfArray1(null, 0));
+      basic.getNthElementOfArray2(null, 0);
+      System.out.println(basic.getNthElementOfArray2(null, 0));
+      setNthElementOfArray(null, 0, 0);
+      setNthElementOfArray1(null, 0, 0);
+      /*System.out.println("Array size");
+      int size=va1.nextInt();
+      int[] dd=new int[size];
+      System.out.println("Enter Array elements");
+      for(int i=0;i<dd.length;i++){
+      int xx=va.nextInt();
+     
+      dd[i]=xx;*/
+      basic.returnNewArraySizeN(5);
+      System.out.println(basic.returnNewArraySizeN(5));
     }
     public int getLengthOfArray(int arr[]){
-    int[] myArr={1,2,4,6,7};
-    int size=myArr.length;
-   return size;
+    int[] myArr={11,12,13,14,15};
+    for(int i=0;i<5;i++){
+        
     }
     
-
+    return myArr.length;
+    }
+    public int getLengthOfArray1(int arr[]){
+        int[] myArr={8,4,7};
+        for(int i=0;i<3;i++){
+            
+        }
+        
+        return myArr.length;
+        }
     /**
      * @param arr the array we're getting data from.
      * @param n the index (number) of the element we're looking to return.
@@ -50,22 +77,45 @@ public class ArrayBasics {
         ArrayList<Integer> number=new ArrayList<>();
         number.add(3);
         number.add(6);
-        number.add(5);
+        number.add(7);
         number.add(8);
 
-        int searrchEle=5;
+        int searrchEle=7;
         for(int i=0;i<number.size();i++){
-            System.out.println(number.get(i));
-        if(searrchEle==number.get(i)){
-            System.out.println(searrchEle);
-       
-        }
-       
+            
         }
         return searrchEle;
     
     }
+    public int getNthElementOfArray1(int[] arr, int n){
+        ArrayList<Integer> number=new ArrayList<>();
+        number.add(5);
+        number.add(3);
+        number.add(9);
+        number.add(1);
+        number.add(0);
 
+        int searrchEle=5;
+        for(int i=0;i<number.size();i++){
+            
+        }
+        return searrchEle;
+    
+    }
+    public int getNthElementOfArray2(int[] arr, int n){
+        ArrayList<Integer> number=new ArrayList<>();
+        number.add(6);
+        number.add(4);
+        number.add(8);
+       
+
+        int searrchEle=8;
+        for(int i=0;i<number.size();i++){
+            
+        }
+        return searrchEle;
+    
+    }
     /**
      *
      * @param arr the array we're getting data from.
@@ -74,34 +124,44 @@ public class ArrayBasics {
      * @param val the value that we will assign to a spot in the array.
      * @return nothing. Because of pass-by-reference, any change to the array will be reflected across our java program.
      */
-    public void setNthElementOfArray(int[] arr, int n, int val){
+    public static void setNthElementOfArray(int[] arr, int n, int val){
+        int[] replace={9,3,5,3,6};
+
+       for(int i=0;i<replace.length;i++){
         
-       for(int i=0;i<arr.length;i++){
-        
-            if(arr[n]==3){
+            if(replace[i]==5){
                 
-                arr[i]=val=7;
-                
+                replace[i]=7;
+                System.out.println(replace[i]);
             }
+            
         }
         
     }
+    public static void setNthElementOfArray1(int[] arr, int n, int val){
+        int[] replace={9,3,4};
 
+       for(int i=0;i<replace.length;i++){
+        
+            if(replace[i]==9){
+                
+                replace[i]=2;
+                System.out.println(replace[i]);
+            }
+            
+        }
+        
+    }
     /**
      * @param n the size of the array we wish to create
      * @return a new int array that can contain n elements.
      */
-    public static int[] returnNewArraySizeN(int n){
-       
-        int arr[]=new int[5];
-        for(int i=0;i<arr.length;i++){
-             
-                System.out.println("array was created! "+ arr[i]);
-               }
-               return arr;
-        }
-       
+    public int[] returnNewArraySizeN(int n){
+         int[] grade={1,2,3,4,5} ;
+    
+        return grade;
     }
+}
         
         
             

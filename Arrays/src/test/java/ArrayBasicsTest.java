@@ -1,4 +1,4 @@
-x`
+
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -28,7 +28,7 @@ public class ArrayBasicsTest {
     public void getLengthTest2(){
         int[] input = {8,4,7};
         int expected = 3;
-        int actual = ab.getLengthOfArray(input);
+        int actual = ab.getLengthOfArray1(input);
         Assert.assertEquals(expected, actual);
     }
 
@@ -52,7 +52,7 @@ public class ArrayBasicsTest {
         int[] input = {5,3,9,1,0};
         int n = 0;
         int expected = 5;
-        int actual = ab.getNthElementOfArray(input, n);
+        int actual = ab.getNthElementOfArray1(input, n);
         Assert.assertEquals(expected, actual);
     }
     /**
@@ -63,7 +63,7 @@ public class ArrayBasicsTest {
         int[] input = {6,4,8};
         int n = 2;
         int expected = 8;
-        int actual = ab.getNthElementOfArray(input, n);
+        int actual = ab.getNthElementOfArray2(input, n);
         Assert.assertEquals(expected, actual);
     }
 
@@ -75,7 +75,7 @@ public class ArrayBasicsTest {
     public void setNthElementOfArrayTest1(){
         int[] input = {9,3,7,3,6};
         int n = 2;
-        int val = 5;
+        int val = 7;
         ab.setNthElementOfArray(input, n, val);
         Assert.assertEquals(input[n], val);
     }
@@ -88,8 +88,9 @@ public class ArrayBasicsTest {
     public void setNthElementOfArrayTest2(){
         int[] input = {9,3,4};
         int n = 0;
-        int val = 2;
-        ab.setNthElementOfArray(input, n, val);
+        int val = 9
+        ;
+        ab.setNthElementOfArray1(input, n, val);
         Assert.assertEquals(input[n], val);
     }
 
