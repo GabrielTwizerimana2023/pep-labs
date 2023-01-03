@@ -2,6 +2,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
+import javafx.css.Size;
+
 /**
  * An array is a group of some predefined number of elements.
  * For instance, we could have an array of 10 ints or 10 Strings.
@@ -24,8 +26,7 @@ public class ArrayBasics {
       ArrayBasics basic;
       basic=new ArrayBasics();
       Scanner va=new Scanner(System.in);
-      Scanner va1=new Scanner(System.in);
-
+    //int[] arr=new int[3];
       basic.getLengthOfArray(null);
       System.out.println(basic.getLengthOfArray(null));
       basic.getLengthOfArray1(null);
@@ -40,16 +41,18 @@ public class ArrayBasics {
       System.out.println(basic.getNthElementOfArray2(null, 0));
       setNthElementOfArray(null, 0, 0);
       setNthElementOfArray1(null, 0, 0);
-      /*System.out.println("Array size");
-      int size=va1.nextInt();
-      int[] dd=new int[size];
-      System.out.println("Enter Array elements");
-      for(int i=0;i<dd.length;i++){
-      int xx=va.nextInt();
+      
+      /*System.out.println("Enter Array elements");
+      for(int i=0;i<3;i++){
+      arr[i]=va.nextInt();
+
+      System.out.println("Array created!: "+arr[i]);
      
-      dd[i]=xx;*/
+      }*/
       basic.returnNewArraySizeN(5);
       System.out.println(basic.returnNewArraySizeN(5));
+      basic.returnNewArraySizeN1(2);
+      System.out.println(basic.returnNewArraySizeN1(2));
     }
     public int getLengthOfArray(int arr[]){
     int[] myArr={11,12,13,14,15};
@@ -157,11 +160,34 @@ public class ArrayBasics {
      * @return a new int array that can contain n elements.
      */
     public int[] returnNewArraySizeN(int n){
-         int[] grade={1,2,3,4,5} ;
+      
+       int[] newA={10,28,36,45,56};
+
+        for(int j=0;j<5;j++){
+       
+        if(n==newA[j]){
+          
+        }
+        System.out.println("" +newA[j]);
+        }
     
-        return grade;
+        return newA;
     }
-}
+    public int[] returnNewArraySizeN1(int n){
+      
+        int[] newA={10,28};
+         for(int j=0;j<2;j++){
+         while(n==newA[j]){
+           
+         }
+         System.out.println("" +newA[j]);
+         }
+     
+         return newA;
+     }
+       
+    }
+
         
         
             

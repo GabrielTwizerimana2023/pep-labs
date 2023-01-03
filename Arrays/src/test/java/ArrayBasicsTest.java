@@ -114,7 +114,7 @@ public class ArrayBasicsTest {
     @Test
     public void returnNewArraySizeNTest2(){
         int input = 2;
-        int[] output = ab.returnNewArraySizeN(input);
+        int[] output = ab.returnNewArraySizeN1(input);
         if(output == null){
             Assert.fail("array nas not been created.");
         }else{
