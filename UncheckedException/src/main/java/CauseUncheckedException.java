@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 
 public class CauseUncheckedException {
     /**
@@ -13,7 +15,17 @@ public class CauseUncheckedException {
      * Notice that errors are separate from exceptions. Errors are external to Java and can occur when some external
      * event happens, like running out of computer memory.
      */
+    public static void main(String [] args){
+        CauseUncheckedException cs=new CauseUncheckedException();
+        cs.throwUncheckedException();
+    }
     public void throwUncheckedException(){
-
+    List<String> fruit=new ArrayList<>();
+    fruit.add("Orange");
+    fruit.add("Apple");
+    fruit.add("Grape");
+    fruit.add("Banana");
+    String show=fruit.get(fruit.size());
+    System.out.println(show);
     }
 }
