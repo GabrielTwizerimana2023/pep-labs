@@ -21,7 +21,7 @@ public class ArraySumTest {
     public void testSum2(){
         int[] nums = {1, 2, 3, 1};
         int target = 7;
-        Assert.assertEquals(target, as.sum(nums));
+        Assert.assertEquals(target, as.sum1(nums));
     }
 
     /**
@@ -31,6 +31,6 @@ public class ArraySumTest {
     public void testSumZeroes(){
         int[] nums = {0, 0, 0};
         int target = 0;
-        Assert.assertEquals(target, as.sum(nums));
+        Assert.assertEquals(target, as.sum2(nums));
     }
 }
