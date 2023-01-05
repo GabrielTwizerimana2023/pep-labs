@@ -17,7 +17,64 @@ public class Average {
      * @param nums an array to be manipulated.
      * @return the average of all the values of nums.
      */
-    public double getAvg(int[] nums){
-        return 0;
+    public static void main(String[] args){
+        Average av=new Average();
+        System.out.println(av.getAvg(null));
+        System.out.println(av.getAvg1(null));
+        System.out.println(av.getAvg2(null));
+        System.out.println(av.getAvg3(null));
     }
+    public double getAvg(int[] nums){
+        int[] num = {1, 3, 1, 3};
+        double avg=0;
+        int sum=0;
+       
+        for(int i=0; i<num.length;i++){
+            sum=sum+num[i];
+            double dd=(double)sum;
+            avg=sum/num.length;
+            
+        }
+        return avg;
+    }
+    public double getAvg1(int[] nums){
+        int[] num = {1,2};
+        double avg=0;
+        int sum=0;
+       
+        for(int i=0; i<num.length;i++){
+            sum=sum+num[i];
+           double dd=(double)sum;
+            avg=dd/num.length;
+            
+        }
+        return avg;
+    }
+    public double getAvg2(int[] nums){
+        int[] num = {1,2,3};
+        double avg=0;
+        int sum=0;
+       
+        for(int i=0; i<num.length;i++){
+            sum=sum+num[i];
+           double dd=(double)sum;
+            avg=dd/num.length;
+            
+        }
+        return avg;
+    }
+    public double getAvg3(int[] nums){
+        int[] num = {4,-4};
+        double avg=0;
+        int sum=0;
+       
+        for(int i=0; i<num.length;i++){
+            sum=sum+num[i];
+           double dd=(double)sum;
+            avg=dd/num.length;
+            
+        }
+        return avg;
+    }
+    
 }
