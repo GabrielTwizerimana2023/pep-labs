@@ -15,7 +15,7 @@ public class GetMax {
     public int max(int[] arr){
         int[] maxarr={0,1,2,3,4};
         
-        int max=0;
+        int max=maxarr[0];
         for(int i=0; i<maxarr.length;i++){
             
                 if(maxarr[i]>max){
