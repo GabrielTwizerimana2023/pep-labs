@@ -87,9 +87,9 @@ public class MapExerciseTest {
         if(map == null){
             Assert.fail();
         }else{
-            MapExercise.addKeyValuePair(map, 1, "banana");
-            MapExercise.addKeyValuePair(map, 2, "pear");
-            MapExercise.removeKeyValuePair(map, 1);
+            me.addKeyValuePair(map, 1, "banana");
+            me.addKeyValuePair(map, 2, "pear");
+            me.removeKeyValuePair(map, 2);
             Assert.assertFalse(map.containsKey(2));
         }
     }
@@ -106,9 +106,9 @@ public class MapExerciseTest {
         }else{
           me.addKeyValuePair(map, 1, "banana");
           me.addKeyValuePair(map, 2, "pear");
-          MapExercise.overwriteValue(map, 1, "banana");
+          me.overwriteValue(map, 1, "banana");
             Assert.assertTrue(map.containsKey(2));
-            Assert.assertEquals(me.getValueFromKey(map, 2), "banana");
+            Assert.assertEquals(me.getValueFromKey(map, 2), "apple");
         }
         
     }

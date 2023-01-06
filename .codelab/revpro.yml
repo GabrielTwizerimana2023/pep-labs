@@ -369,8 +369,8 @@
       getSizeTest2: 1
       addKeyValuePairTest1: 1
       addKeyValuePairTest2: 1
-      removeKeyValuePairTest1: 0
-      overwriteValueTest1: 1
+      removeKeyValuePairTest1: 1
+      overwriteValueTest1: 0
       initializationError: 0
   Queue:
     :Week: 3

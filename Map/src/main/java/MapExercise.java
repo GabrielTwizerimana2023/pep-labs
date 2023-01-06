@@ -35,21 +35,15 @@ public class MapExercise {
     addKeyValuePair(null, 0, null);
     //addKeyValuePair1(null, 0, null);
     System.out.println(dd.getValueFromKey(null, 0));
-    extracted();
+    removeKeyValuePair(null, 0);
     //System.out.println(dd.getValueFromKey1(null, 0));
     overwriteValue(null, 0, null);
-    }
-
-
-    private static void extracted() {
-        removeKeyValuePair(null, 0);
     }
    
     
     public Map<Integer, String> createMap(){
        map=new HashMap<>();
-       //map.put(1, "banana");
-       map.put(2, "pear");
+       
         return map;
     }
 
@@ -76,7 +70,7 @@ public class MapExercise {
     public static void addKeyValuePair(Map<Integer,String> map, int key, String value){
         map=new HashMap<>();
         map.put(1, "Banana");
-        map.put(2, "pear");
+        map.put(2, "avocado");
         map.put(3, "golden berry");
         System.out.println(map);
     }
@@ -119,9 +113,9 @@ public class MapExercise {
      */
     public static void removeKeyValuePair(Map<Integer, String> map, int key){
         map=new HashMap<>();
-        map.put(1, "banana");
-        map.put(2, "pear");
-        map.remove(1, "banana");
+        map.put(1, "Banana");
+        map.put(2, "avocado");
+        map.remove(3, "golden berry");
         System.out.println(map);
     }
 
