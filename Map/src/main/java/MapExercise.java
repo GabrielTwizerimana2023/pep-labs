@@ -1,5 +1,8 @@
 
+import java.util.HashMap;
 import java.util.Map;
+
+import kotlin.collections.MapAccessorsKt;
 
 /**
  * Maps are key/value pairs. They are used in situations where we have some value that we'd like
@@ -14,7 +17,7 @@ import java.util.Map;
  * https://www.w3schools.com/java/java_hashmap.asp
  */
 public class MapExercise {
-
+    Map<Integer, String> map;
     /**
      * Create and instantiate a collection that implements that Map interface, like
      * TreeSet or HashSet. This will be a Map that maps Integer keys to String values.
@@ -25,8 +28,20 @@ public class MapExercise {
      * HashMap and TreeMap. Also like the other collections, Map must leverage a wrapper class instead of a primitive,
      * so here Integer is a wrapper for int.
      */
+    public static void main(String [] args){
+    MapExercise dd=new MapExercise();
+    System.out.println(dd.createMap());
+    dd.getSize(null);
+    System.out.println(dd.getSize(null));
+    
+    }
+    
     public Map<Integer, String> createMap(){
-        return null;
+       map=new HashMap<>();
+       map.put(1, "Nike");
+       map.put(5, "Adidas");
+       map.put(7, "Nike");
+        return map;
     }
 
     /**
@@ -34,9 +49,12 @@ public class MapExercise {
      * @param map a map to be manipulated.
      * @return the size of map.
      */
-    public int getSize(Map<Integer,String> map){
+    public int getSize(Map<Integer ,String > map){
+        Map<Integer, String> bb;
+        bb=new HashMap();
+       bb=map.createMap();
 //        return total number of key/value pairs in the map
-        return 0;
+        return bb.size(map);
     }
 
     /**
@@ -46,7 +64,8 @@ public class MapExercise {
      * @param value the value of the new pair.
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
-    public void addKeyValuePair(Map<Integer,String> map, int key, String value){
+    public void addKeyValuePair(Map<Integer,String> anda, int key, String value){
+      
     }
 
     /**
