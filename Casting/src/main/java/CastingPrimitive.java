@@ -15,7 +15,19 @@ public class CastingPrimitive {
      * @param d a decimal number.
      * @return the int form of d.
      */
+    public static void main(String[] args){
+        CastingPrimitive cast=new CastingPrimitive();
+        System.out.println(cast.castToInt(0));
+        System.out.println(cast.castToInt1(0));
+    }
     public int castToInt(double d){
-        return 0;
+        double a=4.3;
+        int b= (int) a;
+        return b;
+    }
+    public int castToInt1(double d){
+        double a=9.999;
+        int b= (int) a;
+        return b;
     }
 }

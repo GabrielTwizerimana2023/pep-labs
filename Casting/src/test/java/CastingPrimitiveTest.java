@@ -23,7 +23,7 @@ public class CastingPrimitiveTest {
     public void castTest2(){
         double input = 9.999;
         int expected = 9;
-        int actual = cp.castToInt(input);
+        int actual = cp.castToInt1(input);
         Assert.assertEquals(expected, actual);
     }
 }
