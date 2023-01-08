@@ -1,4 +1,3 @@
-
 public class CustomExceptionThrower {
 
     /**
@@ -8,8 +7,25 @@ public class CustomExceptionThrower {
      *
      * I recommend looking at the test case for a good example of try/catch block usage, as well.
      */
-    public void throwCustomException(){
-
+    public static void main(String [] args){
+        try {
+          validate(19);
+          
+        } catch (Exception e) {
+            System.out.println("Exception caught");
+        }
+    }
+        
+    static void validate(int age)  throws CustomException{
+     
+        if(age<18){
+            throw new CustomException("Age is not valid to vote");
+        }else{
+            System.out.println("Welcome to vote");
+        
+     }
     }
 
-}
+   
+    }
+
