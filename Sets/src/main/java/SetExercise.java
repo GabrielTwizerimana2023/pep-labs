@@ -58,11 +58,10 @@ public class SetExercise {
     SetExercise s=new SetExercise();
     numbs=s.createSet();
     numbs.add(1);
-    
-    
     System.out.println(numbs.contains(1));
     System.out.println(numbs.contains(2));
     }
+    
    public void addUniqueItem1(Set<Integer> set, int item){
         SetExercise s=new SetExercise();
    
