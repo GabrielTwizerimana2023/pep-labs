@@ -20,15 +20,11 @@ public class CustomExceptionTest {
     @Test
     public void customExceptionTest1(){
         try{
-            extracted();
+            cet.throwCustomException(0);
             Assert.fail();
         } catch (Exception e) {
             Assert.assertTrue(e instanceof CustomException);
         }
-    }
-
-    private void extracted() {
-        cet.throwCustomException();
     }
 
 }

@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 public class CustomExceptionThrower {
 
     /**
@@ -8,24 +11,25 @@ public class CustomExceptionThrower {
      * I recommend looking at the test case for a good example of try/catch block usage, as well.
      */
     public static void main(String [] args){
-        try {
-          validate(19);
-          
+        
+            Scanner c=new Scanner(System.in);
+            System.out.println("How old are u?");
+            int age=c.nextInt();
+            try {
+                throwCustomException(age);
         } catch (Exception e) {
-            System.out.println("Exception caught");
+            System.out.println("A problem occurred!"+e);
         }
     }
         
-    static void validate(int age)  throws CustomException{
+    static void throwCustomException(int age)  throws CustomException{
      
         if(age<18){
             throw new CustomException("Age is not valid to vote");
         }else{
-            System.out.println("Welcome to vote");
+            System.out.println("Welcome To Vote");
         
      }
     }
-
-   
     }
 
