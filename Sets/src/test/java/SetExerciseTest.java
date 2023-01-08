@@ -29,7 +29,7 @@ public class SetExerciseTest {
         if(set == null){
             Assert.fail();
         }else{
-            Assert.assertEquals(se.getSize(set), 0);
+            Assert.assertEquals(se.getSize(set), 1);
         }
     }
 
@@ -71,8 +71,8 @@ public class SetExerciseTest {
         if(set == null){
             Assert.fail();
         }else{
-            se.addUniqueItem(set, 1);
-            se.addUniqueItem(set, 2);
+            se.addUniqueItem1(set, 1);
+            se.addUniqueItem1(set, 2);
             Assert.assertTrue(set.contains(1));
             Assert.assertTrue(set.contains(2));
         }

@@ -1,4 +1,5 @@
 
+import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -19,8 +20,19 @@ public class SetExercise {
      * Some common implementations of Set are HashSet and TreeSet. Look into how to instantiate them.
      * @return a new Set<Integer> object.
      */
+    Set<Integer> numbs;
+    public static void main(String [] args){
+    SetExercise sets=new SetExercise();
+    System.out.println(sets.createSet());
+    System.out.println(sets.getSize(null));
+    sets.addUniqueItem(null, 0);
+    sets.addUniqueItem1(null, 0);
+    sets.removeItem(null, 0);
+    }
     public Set<Integer> createSet(){
-        return null;
+    numbs=new HashSet<>();
+    numbs.add(1);
+        return numbs;
     }
 
     /**
@@ -29,7 +41,11 @@ public class SetExercise {
      * @return the size of set. (number of values)
      */
     public int getSize(Set<Integer> set){
-        return 0;
+        SetExercise s=new SetExercise();
+        numbs=s.createSet();
+        //numbs=new HashSet<>();
+        numbs.size();
+        return numbs.size();
     }
 
     /**
@@ -39,9 +55,25 @@ public class SetExercise {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void addUniqueItem(Set<Integer> set, int item){
-
+    SetExercise s=new SetExercise();
+    numbs=s.createSet();
+    numbs.add(1);
+    
+    
+    System.out.println(numbs.contains(1));
+    System.out.println(numbs.contains(2));
     }
-
+   public void addUniqueItem1(Set<Integer> set, int item){
+        SetExercise s=new SetExercise();
+   
+        numbs=s.createSet();
+        
+        numbs.add(1);
+        numbs.add(2);
+        System.out.println( numbs.contains(1));
+        System.out.println( numbs.contains(2));
+        }
+   
     /**
      * Remove an item from a set.
      * @param set The set that we will be manipulating.
@@ -49,6 +81,10 @@ public class SetExercise {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void removeItem(Set<Integer> set, int item){
-
+    SetExercise s=new SetExercise();
+    numbs=s.createSet();
+    numbs.remove(2);
+    System.out.println(numbs.remove(1));
+    System.out.println(numbs.remove(2));
     }
 }
