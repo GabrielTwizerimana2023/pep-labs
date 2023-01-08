@@ -13,6 +13,7 @@ import java.util.List;
  * https://www.w3schools.com/java/java_arraylist.asp
  */
 public class ListExercise {
+    List<Integer> list;
     /**
      * Instantiate and return a List of Integers.
      *
@@ -29,18 +30,38 @@ public class ListExercise {
      *
      * @return a List<Integer> object.
      */
-    public List<Integer> createList(){
-        return null;
-    }
+    public static void main(String [] args){
+      ListExercise  x=new ListExercise();
 
+      
+      System.out.println(x.createList());
+      System.out.println(x.getSize(null));
+      x.addToList(null, 0);
+     // System.out.println(x.get(null, 0));
+      x.removeFromList(null, 0);
+      x.updateAtPosition(null, 0, 0);
+      
+     
+    }
+    public List<Integer> createList(){
+        list=new ArrayList<>();
+      
+        return list;
+    }
+    
     /**
      * Get the size of a list.
      *
      * @param list a List<Integer> object.
      * @return the size of List (number of items it holds.)
      */
-    public int getSize(List<Integer> list){
-        return 0;
+   
+     public int getSize(List<Integer> list){
+        ListExercise l=new ListExercise();
+        list=l.createList();
+        list.size();
+
+        return list.size();
     }
 
     /**
@@ -52,6 +73,15 @@ public class ListExercise {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void addToList(List<Integer> list, int value){
+        ListExercise l=new ListExercise();
+        list=l.createList();
+        list.add(10);
+        list.add(20);
+        list.add(30);
+        list.add(40);
+        list.add(50);
+        
+        System.out.println(list);
     }
 
     /**
@@ -67,7 +97,8 @@ public class ListExercise {
      * @return the int at the location in 'list' represented by 'index'.
      */
     public int get(List<Integer> list, int index){
-        return 0;
+       
+    return 0;
     }
 
     /**
@@ -80,7 +111,10 @@ public class ListExercise {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void removeFromList(List<Integer> list, int position){
-
+       ListExercise l=new ListExercise();
+       list=l.createList();
+       list.remove(0);
+       System.out.println(list);
     }
 
     /**
@@ -93,5 +127,8 @@ public class ListExercise {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void updateAtPosition(List<Integer> list, int position, int value){
+        ListExercise l=new ListExercise();
+        list=l.createList();
+        System.out.println(list);
     }
 }
