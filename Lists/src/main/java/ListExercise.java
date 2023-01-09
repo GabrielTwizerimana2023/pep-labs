@@ -36,18 +36,26 @@ public class ListExercise {
       
       System.out.println(x.createList());
       System.out.println(x.getSize(null));
+      System.out.println(x.getSize1(null));
+      x.getSize2(null);
       x.addToList(null, 0);
-     // System.out.println(x.get(null, 0));
-      x.removeFromList(null, 0);
+      System.out.println(x.get(null, 0));
+      x.removeFromList(null, 1);
       x.updateAtPosition(null, 0, 0);
       
      
     }
     public List<Integer> createList(){
         list=new ArrayList<>();
-      
-        return list;
+        if(list==null){
+            System.out.println("A list not correctly instantiated");
+        }else{
+        list.add(1);
+        list.add(2);
+       
     }
+    return list;
+}
     
     /**
      * Get the size of a list.
@@ -59,9 +67,36 @@ public class ListExercise {
      public int getSize(List<Integer> list){
         ListExercise l=new ListExercise();
         list=l.createList();
+        if(list==null){
+            System.out.println("Fail");
+        }else{
         list.size();
-
+        }
         return list.size();
+    }
+    public int getSize1(List<Integer> list){
+        ListExercise l=new ListExercise();
+        //list=l.createList();
+        if(list==null){
+            System.out.println("Fail");
+        }else{
+        l.addToList(list, 1);
+        l.getSize(list);
+        }
+        return l.getSize(list);
+    }
+    
+    public void getSize2(List<Integer> list){
+        ListExercise l=new ListExercise();
+        list=l.createList();
+        if(list==null){
+            System.out.println("Fail");
+        }else{
+        l.addToList(list, 1);
+        l.addToList(list, 2);
+        System.out.println(l.get(list, 1)==2);
+        }
+        
     }
 
     /**
@@ -73,15 +108,8 @@ public class ListExercise {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void addToList(List<Integer> list, int value){
-        ListExercise l=new ListExercise();
-        list=l.createList();
-        list.add(10);
-        list.add(20);
-        list.add(30);
-        list.add(40);
-        list.add(50);
-        
-        System.out.println(list);
+       // ListExercise l=new ListExercise();
+      
     }
 
     /**
@@ -97,8 +125,10 @@ public class ListExercise {
      * @return the int at the location in 'list' represented by 'index'.
      */
     public int get(List<Integer> list, int index){
-       
-    return 0;
+        ListExercise cc=new ListExercise();
+       list=cc.createList();
+       list.get(0);
+    return list.get(0);
     }
 
     /**
@@ -113,7 +143,7 @@ public class ListExercise {
     public void removeFromList(List<Integer> list, int position){
        ListExercise l=new ListExercise();
        list=l.createList();
-       list.remove(0);
+       list.remove(1);
        System.out.println(list);
     }
 
@@ -129,6 +159,8 @@ public class ListExercise {
     public void updateAtPosition(List<Integer> list, int position, int value){
         ListExercise l=new ListExercise();
         list=l.createList();
+        int newva=list.indexOf(1);
+        list.set(newva, 3);
         System.out.println(list);
     }
 }
