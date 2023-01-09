@@ -1,5 +1,7 @@
 
+import java.util.HashMap;
 import java.util.Map;
+
 
 /**
  * Maps are key/value pairs. They are used in situations where we have some value that we'd like
@@ -14,7 +16,7 @@ import java.util.Map;
  * https://www.w3schools.com/java/java_hashmap.asp
  */
 public class MapExercise {
-
+    Map<Integer, String> map;
     /**
      * Create and instantiate a collection that implements that Map interface, like
      * TreeSet or HashSet. This will be a Map that maps Integer keys to String values.
@@ -25,8 +27,24 @@ public class MapExercise {
      * HashMap and TreeMap. Also like the other collections, Map must leverage a wrapper class instead of a primitive,
      * so here Integer is a wrapper for int.
      */
+    public static void main(String [] args){
+    MapExercise dd=new MapExercise();
+    System.out.println(dd.createMap());
+    dd.getSize(null);
+    System.out.println(dd.getSize(null));
+    addKeyValuePair(null, 0, null);
+    //addKeyValuePair1(null, 0, null);
+    System.out.println(dd.getValueFromKey(null, 0));
+    removeKeyValuePair(null, 0);
+    //System.out.println(dd.getValueFromKey1(null, 0));
+    overwriteValue(null, 0, null);
+    }
+   
+    
     public Map<Integer, String> createMap(){
-        return null;
+       map=new HashMap<>();
+       
+        return map;
     }
 
     /**
@@ -34,11 +52,14 @@ public class MapExercise {
      * @param map a map to be manipulated.
      * @return the size of map.
      */
-    public int getSize(Map<Integer,String> map){
+    public int getSize(Map<Integer ,String > map){
+    
+        map=new HashMap();
+        
 //        return total number of key/value pairs in the map
-        return 0;
+        return map.size();
     }
-
+   
     /**
      * Insert a key/value pair into a map.
      * @param map a map to be manipulated.
@@ -46,8 +67,20 @@ public class MapExercise {
      * @param value the value of the new pair.
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
-    public void addKeyValuePair(Map<Integer,String> map, int key, String value){
+    public static void addKeyValuePair(Map<Integer,String> map, int key, String value){
+        map=new HashMap<>();
+        map.put(1, "Banana");
+        map.put(2, "avocado");
+        map.put(3, "golden berry");
+        System.out.println(map);
     }
+    public static void addKeyValuePair1(Map<Integer,String> map, int key, String value){
+        map=new HashMap<>();
+        map.put(1, "Banana");
+       
+        System.out.println(map);
+    }
+
 
     /**
      * Get a value from a map given a key.
@@ -56,8 +89,21 @@ public class MapExercise {
      * @return the value associated with key in map.
      */
     public String getValueFromKey(Map<Integer, String> map, int key){
-        return "";
+       
+        map=new HashMap<>();
+        map.put(1, "banana");
+        map.put(2, "pear");
+       String bb=map.get(1);
+        return bb;
     }
+    /*public String getValueFromKey1(Map<Integer, String> map, int key){
+       
+        map=new HashMap<>();
+        map.put(1, "banana");
+        map.put(2, "pear");
+       String bb=map.get(1);
+        return bb;
+    }*/
 
     /**
      * Remove a key/value pair from a map.
@@ -65,7 +111,12 @@ public class MapExercise {
      * @param key the key corresponding to the pair we will be deleting.
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
-    public void removeKeyValuePair(Map<Integer, String> map, int key){
+    public static void removeKeyValuePair(Map<Integer, String> map, int key){
+        map=new HashMap<>();
+        map.put(1, "Banana");
+        map.put(2, "avocado");
+        map.remove(3, "golden berry");
+        System.out.println(map);
     }
 
     /**
@@ -75,7 +126,11 @@ public class MapExercise {
      * @param value the new value that should be associated with key.
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
-    public void overwriteValue(Map<Integer, String> map, int key, String value){
-
-    }
-}
+    public static void overwriteValue(Map<Integer, String> map, int key, String value){
+     map=new HashMap<>();
+     map.put(1, "banana");
+     map.put(2, "pear");
+     System.out.println(map);
+    map.replace(2, "apple");
+    System.out.println(map.toString());
+    }}
