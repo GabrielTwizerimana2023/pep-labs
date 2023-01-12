@@ -33,8 +33,8 @@
     checkoutLocation: pep-gitpod-workspace
     upstreamRemoteURI: https://github.com/revature-curriculum/pep-gitpod-workspace.git
   :gitpod_workspace:
-    :workspace_id: gabrieltwiz-pepgitpodwo-a0uq2zn9e2j
-    :workspace_url: https://gabrieltwiz-pepgitpodwo-a0uq2zn9e2j.ws-us82.gitpod.io
+    :workspace_id: gabrieltwiz-pepgitpodwo-c2jh66i9ikb
+    :workspace_url: https://gabrieltwiz-pepgitpodwo-c2jh66i9ikb.ws-us82.gitpod.io
     :repo_root: "/workspace/pep-gitpod-workspace"
     :git_user_email: gabyjobseekig2022@gmail.com
     :git_user_name: Gabriel Twizerimna
