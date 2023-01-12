@@ -62,13 +62,20 @@ public class CreateATable {
      *     |'Hotel California' |'Eagles'               |
      *     |'Kashmir'          |'Led Zeppelin'         |
      */
-    public void problem1(){
+    
+     public static void main(String args[]){
+        CreateATable c=new CreateATable();
+       c.problem1();
+    }
+    public  void problem1(){
         String sql = FileUtil.parseSQLFile("problem1.sql");
 
         try {
             Connection connection = ConnectionUtil.getConnection();
             Statement s = connection.createStatement();
+            sql="SELECT * FROM song;";
             s.executeUpdate(sql);
+            
         } catch (SQLException e) {
             System.out.println("problem1: " + e.getMessage() + '\n');
         }

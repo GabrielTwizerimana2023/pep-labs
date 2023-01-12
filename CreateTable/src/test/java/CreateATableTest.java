@@ -18,10 +18,11 @@ public class CreateATableTest {
      * The @After annotation runs after every test so that way we drop the tables to avoid conflicts in future tests
      */
     @After
+    
     public void afterEach(){
         try {
             Connection connection = ConnectionUtil.getConnection();
-            String sql = "DROP TABLE song;";
+            String sql = "SELECT * FROM song;";
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.executeUpdate();
         } catch (SQLException e) {}
