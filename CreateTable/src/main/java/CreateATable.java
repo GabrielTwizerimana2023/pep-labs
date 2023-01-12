@@ -6,7 +6,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.sql.DriverManager;
 
 /**
  * SQL sublanguage: DDL (Data Definition Language)
@@ -63,20 +62,13 @@ public class CreateATable {
      *     |'Hotel California' |'Eagles'               |
      *     |'Kashmir'          |'Led Zeppelin'         |
      */
-    
-     public static void main(String args[]){
-        CreateATable c=new CreateATable();
-       c.problem1();
-    }
-    public  void problem1(){
+    public void problem1(){
+        String sql = FileUtil.parseSQLFile("problem1.sql");
+
         try {
-            String sql = FileUtil.parseSQLFile("problem1.sql");
             Connection connection = ConnectionUtil.getConnection();
-            Connection conn=DriverManager.getConnection("jdbc:h2:./h2/db");
-            Statement s = conn.createStatement();
-            sql="create table song(title varchar(255),artist varchar(255))";
+            Statement s = connection.createStatement();
             s.executeUpdate(sql);
-            
         } catch (SQLException e) {
             System.out.println("problem1: " + e.getMessage() + '\n');
         }

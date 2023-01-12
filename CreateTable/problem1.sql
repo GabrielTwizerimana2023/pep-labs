@@ -1,5 +1,1 @@
-CREATE TABLE song(
-    title varchar(255),
-     artist varchar(255)
-);
-
+CREATE TABLE song (Title varchar(100), Artist varchar(100));
