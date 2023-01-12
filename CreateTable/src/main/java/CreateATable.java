@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.DriverManager;
 
 /**
  * SQL sublanguage: DDL (Data Definition Language)
@@ -68,12 +69,12 @@ public class CreateATable {
        c.problem1();
     }
     public  void problem1(){
-        String sql = FileUtil.parseSQLFile("problem1.sql");
-
         try {
+            String sql = FileUtil.parseSQLFile("problem1.sql");
             Connection connection = ConnectionUtil.getConnection();
-            Statement s = connection.createStatement();
-            sql="SELECT * FROM song;";
+            Connection conn=DriverManager.getConnection("jdbc:h2:./h2/db");
+            Statement s = conn.createStatement();
+            sql="create table song(title varchar(255),artist varchar(255))";
             s.executeUpdate(sql);
             
         } catch (SQLException e) {
