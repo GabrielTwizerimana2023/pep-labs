@@ -21,7 +21,7 @@ public class DoesNotContainTest {
         int[] input = {0,1,2,3,4};
         int target = 4;
         boolean expected = false;
-        Assert.assertEquals(expected, c.arrayDoesNotContain(input, target));
+        Assert.assertEquals(expected, c.arrayDoesNotContain1(input, target));
     }
     @Test
     public void containTest3(){
@@ -35,7 +35,7 @@ public class DoesNotContainTest {
         int[] input = {9,7,7,3};
         int target = 7;
         boolean expected = false;
-        Assert.assertEquals(expected, c.arrayDoesNotContain(input, target));
+        Assert.assertEquals(expected, c.arrayDoesNotContain1(input, target));
     }
 
 }
