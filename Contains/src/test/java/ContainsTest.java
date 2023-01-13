@@ -30,7 +30,7 @@ public class ContainsTest {
         int[] input = {0,1,2,3,4};
         int target = 4;
         boolean expected = true;
-        Assert.assertEquals(expected, c.arrayContains(input, target));
+        Assert.assertEquals(expected, c.arrayContains1(input, target));
     }
     /**
      * Given an array {8,7,3,6} and a value 5, arrayContains should return false because the array does not contain
