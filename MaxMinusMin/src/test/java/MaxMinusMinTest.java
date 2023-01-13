@@ -37,7 +37,7 @@ public class MaxMinusMinTest {
         input.add(16);
         input.add(32);
         int expected = 30;
-        int actual = mmm.difference(input);
+        int actual = mmm.difference1(input);
         Assert.assertEquals(expected,actual);
     }
     /**
@@ -52,7 +52,7 @@ public class MaxMinusMinTest {
         input.add(4);
         input.add(7);
         int expected = 7;
-        int actual = mmm.difference(input);
+        int actual = mmm.difference2(input);
         Assert.assertEquals(expected,actual);
     }
     /**
@@ -67,7 +67,7 @@ public class MaxMinusMinTest {
         input.add(0);
         input.add(0);
         int expected = 0;
-        int actual = mmm.difference(input);
+        int actual = mmm.difference3(input);
         Assert.assertEquals(expected,actual);
     }
 }
