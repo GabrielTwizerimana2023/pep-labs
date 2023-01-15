@@ -137,11 +137,25 @@ public class ListExercise {
     public void removeFromList(List<Integer> list, int position){
        ListExercise l=new ListExercise();
        list=l.createList();
-       l.addToList(list, 1);
-       l.removeFromList(list, 0);
-       System.out.println(l);
-       System.out.println(l.getSize(list)==0);
+       list.add(1);
+       list.remove(0);
+       System.out.println(list);
+   
     }
+
+    public void removeFromList1(List<Integer> list, int position){
+        ListExercise l=new ListExercise();
+        //list=l.createList();
+        l.addToList(list, 1);
+        l.addToList(list, 2);
+        l.removeFromList(list, 1);
+        for(int i:list){
+            System.out.println(i);
+        }
+       // System.out.println(list.contains(1));
+       // System.out.println(list.contains(2));
+       // System.out.println(l.getSize(list)==1);
+     }
 
     /**
      * Update an index of a list.

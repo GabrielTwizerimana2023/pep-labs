@@ -140,7 +140,7 @@ public class ListExerciseTest {
         }else{
             le.addToList(list, 1);
             le.addToList(list, 2);
-            le.removeFromList(list, 1);
+            le.removeFromList1(list, 1);
             Assert.assertTrue(list.contains(1));
             Assert.assertFalse(list.contains(2));
             Assert.assertTrue(le.getSize(list) == 1);
