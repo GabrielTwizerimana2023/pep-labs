@@ -109,7 +109,7 @@ public class ListExerciseTest {
         }else{
             le.addToList(list, 1);
             le.addToList(list, 2);
-            Assert.assertTrue(le.get(list, 1) == 2);
+            Assert.assertTrue(le.get2(list, 1) == 2);
         }
     }
 

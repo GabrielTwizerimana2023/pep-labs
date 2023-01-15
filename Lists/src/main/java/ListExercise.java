@@ -30,21 +30,6 @@ public class ListExercise {
      *
      * @return a List<Integer> object.
      */
-    public static void main(String [] args){
-      ListExercise  x=new ListExercise();
-
-      
-      System.out.println(x.createList());
-      System.out.println(x.getSize(null));
-      System.out.println(x.getSize1(null));
-      x.getSize2(null);
-      x.addToList(null, 0);
-      System.out.println(x.get(null, 0));
-      x.removeFromList(null, 1);
-      x.updateAtPosition(null, 0, 0);
-      
-     
-    }
     public List<Integer> createList(){
         list=new ArrayList<>();
         if(list==null){
@@ -129,8 +114,17 @@ public class ListExercise {
        list=cc.createList();
        list.get(0);
     return list.get(0);
+    
     }
-
+    public int get2(List<Integer> list, int index){
+        ListExercise cc=new ListExercise();
+       list=cc.createList();
+       cc.addToList(list, 1);
+       cc.addToList(list, 2);
+       cc.get(list, 1);
+       System.out.println(cc.get(list, 1)==2);
+       return cc.get(list, 1);
+    }
     /**
      * Remove an index from a list.
      * We can remove an item from the list, which will cause all items after it to reduce their index by 1 (they are
@@ -143,8 +137,10 @@ public class ListExercise {
     public void removeFromList(List<Integer> list, int position){
        ListExercise l=new ListExercise();
        list=l.createList();
-       list.remove(1);
-       System.out.println(list);
+       l.addToList(list, 1);
+       l.removeFromList(list, 0);
+       System.out.println(l);
+       System.out.println(l.getSize(list)==0);
     }
 
     /**
