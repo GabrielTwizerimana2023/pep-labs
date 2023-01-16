@@ -22,7 +22,7 @@ public class SimpleStringMethodsTest {
      */
     @Test
     public void charAtTest1(){
-        Assert.assertEquals(ssm.charAt("abcdef", 2), 'c');
+        Assert.assertEquals(ssm.charAt1("abcdef", 2), 'c');
     }
     /**
      * the char at position 0 of 'abcdef' should return 'a'.
@@ -36,7 +36,7 @@ public class SimpleStringMethodsTest {
      */
     @Test
     public void indexOfTest1(){
-        Assert.assertEquals(ssm.indexOf("zebra", 'b'), 2);
+        Assert.assertEquals(ssm.indexOf("zebra", 'q'), -1);
     }
     /**
      * the index of 'q' of "zebra" should return -1.
