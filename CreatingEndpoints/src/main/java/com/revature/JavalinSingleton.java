@@ -1,5 +1,7 @@
 package com.revature;
 
+import org.eclipse.jetty.server.Request;
+
 import io.javalin.Javalin;
 
 public class JavalinSingleton {
@@ -13,9 +15,9 @@ public class JavalinSingleton {
      */
     public static Javalin getInstance(){
         Javalin app = Javalin.create();
-        
-        //write endpoint here
-
+        app.start(9000);
+        app.get("/", ctx->ctx.result("Hello World"));
+     
         return app;
     }
     
