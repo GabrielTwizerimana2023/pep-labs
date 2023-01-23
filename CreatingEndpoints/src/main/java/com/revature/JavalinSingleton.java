@@ -13,12 +13,19 @@ public class JavalinSingleton {
      * 
      * Note: Please refer to the "CreatingEndpoints.MD" file for more assistance if needed.
      */
+    public static void main( String[] args )
+    {
+       // JavalinSingleton apps = new JavalinSingleton();
+        getInstance();
+    }
+
     public static Javalin getInstance(){
         Javalin app = Javalin.create();
-        app.start(9000);
-        app.get("/", ctx->ctx.result("Hello World"));
+        app.get("/hello/", ctx->ctx.result("Hello World"));
+        app.start(7071);
+   
      
         return app;
-    }
+    }}
     
-}
+
