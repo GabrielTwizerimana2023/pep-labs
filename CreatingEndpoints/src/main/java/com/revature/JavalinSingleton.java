@@ -18,7 +18,7 @@ public class JavalinSingleton {
         Javalin app = Javalin.create();
         app.start(9000);
         app.get("/hello", ctx->{
-        ctx.result("Hello World mwana");
+        ctx.result("Hello World");
     });
        
         return app;
