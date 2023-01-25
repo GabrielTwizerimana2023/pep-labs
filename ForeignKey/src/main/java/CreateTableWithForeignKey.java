@@ -1,5 +1,3 @@
-
-
 import Util.ConnectionUtil;
 import Util.FileUtil;
 
@@ -88,7 +86,7 @@ public class CreateTableWithForeignKey {
          * Note: The post column will hold the text content of the post and the user_fk column will be a foreign key to
          * the user table's id.
          */
-        String sql = FileUtil.parseSQLFile("CREATE TABLE post (id SERIAL PRIMARY KEY,post VARCHAR(255),user_fk int)");
+        String sql = FileUtil.parseSQLFile("problem1.sql");
 
         try {
             Connection connection = ConnectionUtil.getConnection();
