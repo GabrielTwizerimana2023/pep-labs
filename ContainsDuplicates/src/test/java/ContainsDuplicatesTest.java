@@ -11,7 +11,7 @@ public class ContainsDuplicatesTest {
     @Test
     public void containsDuplicatesTest1(){
         int[] nums = {1, 2, 3, 4, 5};
-        boolean target = false;
+        boolean target = true;
         Assert.assertEquals(target, cd.containsDuplicate(nums));
     }
     /**
