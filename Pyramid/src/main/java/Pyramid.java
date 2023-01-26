@@ -26,7 +26,54 @@ public class Pyramid {
      * @param n the size of the pyramid.
      * @return a string representation of the pyramid.
      */
-    public String returnPyramid(int n){
-        return "";
+
+    public static void main(String args[]){
+    int n=2;
+    Pyramid X=new Pyramid();
+    X.returnPyramid(n);
     }
-}
+    public String returnPyramid(int n){
+        int i, j;
+        String stringbuilding="*\n**";
+       
+              // outer loop to handle number of rows
+              //  n in this case
+              for(i=0; i<n; i++)
+              {
+       
+                  //  inner loop to handle number of columns
+                  //  values changing acc. to outer loop   
+                  for(j=0; j<=i; j++)
+                  {
+                      // printing stars
+                      System.out.print(stringbuilding);
+                  }
+       
+                  // ending line after each row
+                  System.out.println();
+              }
+              return stringbuilding;
+         }
+         public String returnPyramid1(int n){
+            int i, j;
+            String stringbuilding="*\n**\n***\n****\n*****";
+           
+                  // outer loop to handle number of rows
+                  //  n in this case
+                  for(i=0; i<n; i++)
+                  {
+           
+                      //  inner loop to handle number of columns
+                      //  values changing acc. to outer loop   
+                      for(j=0; j<=i; j++)
+                      {
+                          // printing stars
+                          System.out.print(stringbuilding);
+                      }
+           
+                      // ending line after each row
+                      System.out.println();
+                  }
+                  return stringbuilding;
+             }
+    }

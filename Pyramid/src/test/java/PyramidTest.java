@@ -17,7 +17,7 @@ public class PyramidTest {
     public void pyramidTest1(){
         int input = 5;
         String expected = "*\n**\n***\n****\n*****";
-        String actual = p.returnPyramid(input).trim();
+        String actual = p.returnPyramid1(input).trim();
         Assert.assertEquals(expected,actual);
     }
 
