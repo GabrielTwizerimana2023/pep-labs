@@ -28,9 +28,10 @@ public class Pyramid {
      */
 
     public static void main(String args[]){
-    int n=2;
-    Pyramid X=new Pyramid();
-    X.returnPyramid(n);
+    
+    Pyramid x=new Pyramid();
+    x.returnPyramid(2);
+    x.returnPyramid1(5);
     }
     public String returnPyramid(int n){
         int i, j;
