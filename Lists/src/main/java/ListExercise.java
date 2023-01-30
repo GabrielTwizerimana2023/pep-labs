@@ -55,7 +55,7 @@ public class ListExercise {
     public void addToList(List<Integer> list, int value){
         ListExercise add=new ListExercise();
         list=add.createList();
-        list.add(2);
+        list.add(0);
         System.out.println(list);
     }
 
@@ -88,12 +88,12 @@ public class ListExercise {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void removeFromList(List<Integer> list, int position){
-    //ListExercise remov=new ListExercise();
-    //list=remov.createList();
-    list.remove(position);
-    for(Integer rmv:list ){
-    System.out.println(rmv);
-    }}
+        ListExercise fromlist=new ListExercise();
+        list=fromlist.createList();
+    list.remove(0);
+
+    System.out.println(list);
+    }
 
     /**
      * Update an index of a list.

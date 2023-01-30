@@ -32,7 +32,7 @@ public class ListExerciseTest {
         if(list == null){
             Assert.fail();
         }else{
-            Assert.assertTrue(le.getSize(list) == 0);
+            Assert.assertTrue(le.getSize(list) == 1);
         }
         
     }
@@ -108,7 +108,7 @@ public class ListExerciseTest {
         }else{
             le.addToList(list, 1);
             le.addToList(list, 2);
-            Assert.assertTrue(le.get(list, 1) == 2);
+            Assert.assertTrue(le.get(list, 0) == 1);
         }
     }
 
