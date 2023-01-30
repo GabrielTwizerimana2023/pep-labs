@@ -47,21 +47,8 @@ public class BookService {
      * @return all books.
      */
     public List<Book> getAllBooks() {
-        Connection conn=ConnectionUtil.getConnection();
-        List<Book> books=new ArrayList<>();
-        try {
-            String sql="SELECT * FROM book;";
-            PreparedStatement preps=conn.prepareStatement(sql);
-            ResultSet rs=preps.executeQuery();
-            while(rs.next()){
-             Book book=new Book(rs.getInt("isbn"),rs.getInt("author_id"),
-             rs.getString("title"),rs.getInt("copies_available"));
-             books.add(book);
-            }
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-        return books;
+    
+        return bookDAO.getAllBooks();
     }
     /**
      * TODO: Use the bookDAO to persist a book to the database.
