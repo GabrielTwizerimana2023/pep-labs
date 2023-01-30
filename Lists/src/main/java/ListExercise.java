@@ -30,10 +30,10 @@ public class ListExercise {
      */
      public static void main(String[] args) {
         ListExercise ex=new ListExercise();
-        System.out.println(ex.createList());
-        System.out.println(ex.getSize(null)); 
+        System.out.println("Created list:"+ex.createList());
+        System.out.println("Get size:"+ex.getSize(null)); 
         ex.addToList(null, 6);
-        System.out.println(ex.get(null, 1));  
+        System.out.println("Get from list:"+ex.get(null, 1));  
         ex.removeFromList(null, 0);
         ex.updateAtPosition(null, 0, 0);
     }
@@ -72,7 +72,7 @@ public class ListExercise {
         ListExercise add=new ListExercise();
         list=add.createList();
         list.add(5, 6);
-        System.out.println(list);
+        System.out.println("Added to list:"+list);
     }
 
     /**
@@ -107,7 +107,7 @@ public class ListExercise {
         ListExercise fromlist=new ListExercise();
         list=fromlist.createList();
         list.remove(4);
-    System.out.println(list);
+    System.out.println("Removed from list:"+list);
     }
 
     /**
@@ -123,7 +123,7 @@ public class ListExercise {
         ListExercise fromlist=new ListExercise();
         list=fromlist.createList();
         list.set(0, 20);
-         System.out.println(list);
+         System.out.println("UpdatedAtPosition:"+list);
         
     }
 }
