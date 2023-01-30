@@ -2,8 +2,15 @@ package Application.Service;
 
 import Application.DAO.BookDAO;
 import Application.Model.Book;
+import Application.Util.ConnectionUtil;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.List;
+
+import org.h2.command.ddl.PrepareProcedure;
 
 /**
  * The purpose of a Service class is to contain "business logic" that sits between the web layer (controller) and
@@ -40,7 +47,21 @@ public class BookService {
      * @return all books.
      */
     public List<Book> getAllBooks() {
-        return null;
+        Connection conn=ConnectionUtil.getConnection();
+        List<Book> books=new ArrayList<>();
+        try {
+            String sql="SELECT * FROM book;";
+            PreparedStatement preps=conn.prepareStatement(sql);
+            ResultSet rs=preps.executeQuery();
+            while(rs.next()){
+             Book book=new Book(rs.getInt("isbn"),rs.getInt("author_id"),
+             rs.getString("title"),rs.getInt("copies_available"));
+             books.add(book);
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return books;
     }
     /**
      * TODO: Use the bookDAO to persist a book to the database.
@@ -51,7 +72,19 @@ public class BookService {
      * key was already in use.)
      */
     public Book addBook(Book book) {
-
+        Connection conn=ConnectionUtil.getConnection();
+    try {
+        String sql="INSERT INTO book (isbn,author_id,title,copies_available) VALUES (?,?,?,?)";
+        PreparedStatement preps=conn.prepareStatement(sql);
+        preps.setInt(1,book.getIsbn());
+        preps.setInt(2,book.getAuthor_id());
+        preps.setString(3, book.getTitle());
+        preps.setInt(4, book.getCopies_available());
+        preps.executeUpdate();
+        return book;
+    } catch (Exception e) {
+        System.out.println(e.getMessage());
+    }
         return null;
     }
     /**
@@ -59,7 +92,21 @@ public class BookService {
      * @return all available books (bookCount over zero)
      */
     public List<Book> getAllAvailableBooks() {
-        return null;
+        List<Book> books=new ArrayList<>();
+        Connection conn=ConnectionUtil.getConnection();
+        try {
+            String sql="SELECT * FROM book WHERE copies_available>?;";
+            PreparedStatement preps=conn.prepareStatement(sql);
+            ResultSet rs=preps.executeQuery();
+            while(rs.next()){
+            Book book=new Book(rs.getInt("isbn"),rs.getInt("author_id"),
+            rs.getString("title"),rs.getInt("copies_available"));
+            books.add(book);
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return books;
     }
 
 }
