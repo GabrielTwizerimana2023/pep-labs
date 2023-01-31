@@ -1,8 +1,15 @@
 package Application.Service;
 
 import Application.Model.Flight;
+import Application.Util.ConnectionUtil;
 import Application.DAO.FlightDAO;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -44,9 +51,11 @@ public class FlightService {
      * @return the newly added flight if the add operation was successful, including the flight_id. We do this to
      *         inform our provide the front-end client with information about the added Flight.
      */
-    public Flight addFlight(Flight flight){
-        return null;
+    public Flight addFlight(Flight flight){ 
+   // flightDAO.insertFlight(flight);
+        return flightDAO.insertFlight(flight);
     }
+    
 
     /**
      * TODO: Use the FlightDAO to update an existing flight from the database.
@@ -61,17 +70,20 @@ public class FlightService {
      *         user should have some insight if they attempted to edit a nonexistent flight.)
      */
     public Flight updateFlight(int flight_id, Flight flight){
-        return null;
+    if(flightDAO.getFlightById(flight_id)!=null){
+     return flightDAO.getFlightById(flight_id);
     }
-
+    return null;
+    }
     /**
      * TODO: Use the FlightDAO to retrieve a List containing all flights.
      * You could use the flightDAO.getAllFlights method.
      *
      * @return all flights in the database.
      */
-    public List<Flight> getAllFlights() {
-        return null;
+    public List<Flight> getAllFlights(){
+        
+        return flightDAO.getAllFlights();
     }
 
     /**
@@ -83,6 +95,6 @@ public class FlightService {
      * @return all flights departing from departure_city and arriving at arrival_city.
      */
     public List<Flight> getAllFlightsFromCityToCity(String departure_city, String arrival_city) {
-        return null;
+       return flightDAO.getAllFlightsFromCityToCity(departure_city, arrival_city);
     }
 }
