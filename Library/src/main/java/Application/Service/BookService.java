@@ -59,8 +59,14 @@ public class BookService {
      * key was already in use.)
      */
     public Book addBook(Book book) {
-      
-        return null;
+        try {
+            if(book.getIsbn().con){
+            return null;
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return bookDAO.insertBook(book);
     }
     /**
      * TODO: Use the bookDAO to retrieve a list of all books that have a bookCount above 0.
