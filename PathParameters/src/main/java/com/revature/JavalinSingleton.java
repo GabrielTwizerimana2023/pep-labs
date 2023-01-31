@@ -15,9 +15,9 @@ public class JavalinSingleton {
          * Note: Please refer to the "PathParameters.MD" file for more assistance if needed.
          */
          
-        app.get("/firstname/{}", ctx -> {
-            String firstName=ctx.pathParam("Kevin");
-          
+        app.get("first/{name}", ctx -> {
+            String first=ctx.pathParam("name");
+          ctx.result("name");
         });
 
 
