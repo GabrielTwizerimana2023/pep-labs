@@ -59,11 +59,10 @@ public class OtherStringMethods {
      */
     public String[] splitStringIntoMultipleStrings(String s1, String splitAround){
       s1="banana apple pear";
-      int i;
-        splitAround="";
+        splitAround=":";
        String strs[]=s1.split(splitAround);
-       for (i=0;i<strs.length;i++){
-       System.out.println(strs[i]);
+       for (String rs:strs){
+       System.out.println(rs);
        }
        return null; 
 } 
