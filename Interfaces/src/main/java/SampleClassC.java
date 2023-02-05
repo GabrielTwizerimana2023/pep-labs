@@ -17,7 +17,29 @@
  */
 
 public class SampleClassC implements Comparable<SampleClassC>{
+   
+   public String x;
     int val;
+
+   public SampleClassC(String x, int val) {
+    this.x = x;
+    this.val = val;
+}
+
+public String getX() {
+    return this.x;
+}
+
+public int getVal() {
+    return this.val;
+}
+
+@Override
+public String toString() {
+    return this.getX() + " (" + this.getVal() + ")";
+}
+
+    
     /**
      * TODO: implement compareTo for this class
      *
@@ -27,7 +49,18 @@ public class SampleClassC implements Comparable<SampleClassC>{
      * @param other another object of type SampleClassC, which we are comparing to 'this' object.
      */
     public int compareTo(SampleClassC other) {
-        return 0;
+        if (this.val == other.getVal()) {
+            return 0;
+        } else if (this.val > other.getVal()) {
+            return 1;
+        } else {
+            return -1;
+        }
+    }
+   /* public int compareTo(SampleClassC other) {
+        return this.val - other.getVal();
+    }*/
+       
     }
 
-}
+
