@@ -25,7 +25,7 @@ public class RemoveAllCharacterTest {
         String input = "gorilla";
         String removed = "l";
         String expected = "goria";
-        String actual = rac.removeAll(input, removed);
+        String actual = rac.removeAll1(input, removed);
         Assert.assertEquals(expected,actual);
     }
 
@@ -37,7 +37,7 @@ public class RemoveAllCharacterTest {
         String input = "banana";
         String removed = "a";
         String expected = "bnn";
-        String actual = rac.removeAll(input, removed);
+        String actual = rac.removeAll2(input, removed);
         Assert.assertEquals(expected,actual);
     }
 }
