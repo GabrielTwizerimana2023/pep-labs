@@ -29,7 +29,7 @@ public class AdvancedBooleanLogicTest {
         boolean input1 = true;
         boolean input2 = false;
         boolean expected = true;
-        boolean actual = abl.returnNotBoth(input1, input2);
+        boolean actual = abl.returnNotBoth1(input1, input2);
         Assert.assertEquals(expected, actual);
     }
     /**
@@ -40,7 +40,7 @@ public class AdvancedBooleanLogicTest {
         boolean input1 = false;
         boolean input2 = true;
         boolean expected = true;
-        boolean actual = abl.returnNotBoth(input1, input2);
+        boolean actual = abl.returnNotBoth2(input1, input2);
         Assert.assertEquals(expected, actual);
     }
     /**
@@ -51,7 +51,7 @@ public class AdvancedBooleanLogicTest {
         boolean input1 = false;
         boolean input2 = false;
         boolean expected = true;
-        boolean actual = abl.returnNotBoth(input1, input2);
+        boolean actual = abl.returnNotBoth3(input1, input2);
         Assert.assertEquals(expected, actual);
     }
     /**
@@ -73,7 +73,7 @@ public class AdvancedBooleanLogicTest {
         boolean input1 = true;
         boolean input2 = false;
         boolean expected = true;
-        boolean actual = abl.returnExclusiveOr(input1, input2);
+        boolean actual = abl.returnExclusiveOr1(input1, input2);
         Assert.assertEquals(expected, actual);
     }
     /**
@@ -84,7 +84,7 @@ public class AdvancedBooleanLogicTest {
         boolean input1 = false;
         boolean input2 = true;
         boolean expected = true;
-        boolean actual = abl.returnExclusiveOr(input1, input2);
+        boolean actual = abl.returnExclusiveOr2(input1, input2);
         Assert.assertEquals(expected, actual);
     }
     /**
@@ -95,7 +95,7 @@ public class AdvancedBooleanLogicTest {
         boolean input1 = false;
         boolean input2 = false;
         boolean expected = false;
-        boolean actual = abl.returnExclusiveOr(input1, input2);
+        boolean actual = abl.returnExclusiveOr3(input1, input2);
         Assert.assertEquals(expected, actual);
     }
     /**
@@ -106,7 +106,7 @@ public class AdvancedBooleanLogicTest {
         boolean input1 = true;
         boolean input2 = true;
         boolean expected = false;
-        boolean actual = abl.returnNeitherNor(input1, input2);
+        boolean actual = abl.returnNeitherNor3(input1, input2);
         Assert.assertEquals(expected, actual);
     }
     /**
@@ -117,7 +117,7 @@ public class AdvancedBooleanLogicTest {
         boolean input1 = false;
         boolean input2 = true;
         boolean expected = false;
-        boolean actual = abl.returnNeitherNor(input1, input2);
+        boolean actual = abl.returnNeitherNor1(input1, input2);
         Assert.assertEquals(expected, actual);
     }
     /**
@@ -139,7 +139,7 @@ public class AdvancedBooleanLogicTest {
         boolean input1 = false;
         boolean input2 = false;
         boolean expected = true;
-        boolean actual = abl.returnNeitherNor(input1, input2);
+        boolean actual = abl.returnNeitherNor2(input1, input2);
         Assert.assertEquals(expected, actual);
     }
 }
