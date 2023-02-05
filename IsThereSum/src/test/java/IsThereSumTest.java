@@ -38,7 +38,7 @@ public class IsThereSumTest {
         int[] input = {2, 2, 3, 4, 5};
         int target = 11;
         boolean expected = false;
-        Assert.assertEquals(expected, its.check(input, target));
+        Assert.assertEquals(expected, its.check1(input, target));
     }
     /**
      * Given the input {2, 2, 3, 4, 5} and a target 10, there no possible pair of numbers for a sum because
@@ -49,6 +49,6 @@ public class IsThereSumTest {
         int[] input = {2, 2, 3, 4, 5};
         int target = 10;
         boolean expected = false;
-        Assert.assertEquals(expected, its.check(input, target));
+        Assert.assertEquals(expected, its.check1(input, target));
     }
 }
