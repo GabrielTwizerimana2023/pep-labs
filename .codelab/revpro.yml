@@ -40,12 +40,12 @@
     :git_user_name: Gabriel Twizerimna
 :progress:
   :count_labs_total: 96
-  :count_labs_passed: 1
+  :count_labs_passed: 0
   :count_tests_total: 361
-  :count_tests_passed: 3
+  :count_tests_passed: 0
 :progress_test:
   :count_tests_total: 361
-  :count_tests_passed: 3
+  :count_tests_passed: 0
   Start:
     :Week: 1
     :Order: 1
@@ -1037,11 +1037,17 @@
     :Order: 4
     :Type: challenge
     :count_tests: 3
-    :count_tests_passed: 3
+    :count_tests_passed: 0
     :tests:
       fibTest1: 1
       fibTest2: 1
       fibTest3: 1
+      mostCommonCharacterTest1: 0
+      mostCommonCharacterTest2: 0
+      mostCommonCharacterTest3: 0
+      mostCommonCharacterTest4: 0
+      mostCommonCharacterTest5: 0
+      mostCommonCharacterTest6: 0
   StringIsPalindrome:
     :Week: 10
     :Order: 1
