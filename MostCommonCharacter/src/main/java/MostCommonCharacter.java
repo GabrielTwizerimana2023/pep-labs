@@ -1,7 +1,7 @@
 import java.util.Collections;
 import java.util.HashMap;
-
-import com.azul.crs.runtime.utils.PackedDataEntriesMap.Entry;
+import java.util.Set;
+import java.util.Map.Entry;
 
 public class MostCommonCharacter {
     /**
@@ -11,31 +11,46 @@ public class MostCommonCharacter {
      * @param str A String.
      * @return the most common character within str.
      */
-    public char recurringChar(String str) {
-        HashMap<Character, Integer> map = new HashMap<Character, Integer>(); 
-         char maxappearchar = ' ';
-         for (int i = 0; i < str.length(); i++)
-         {
-              if ( map.containsKey(str.charAt(i)))
-              {
-                    map.put (str.charAt(i), map.get(str.charAt(i)) + 1 );
-              }       
-              else
-              {
-                map.put (str.charAt(i), 1);
-              }    
-              int maxValueInMap=(Collections.max(map.values()));  // This will return max value in the Hashmap    
-              for (java.util.Map.Entry<Character, Integer> entry : map.entrySet())
-              {  
-                  if (entry.getValue()==maxValueInMap)
-                  {
-                      System.out.println("the max char is : " + entry.getKey() + "  and displayed  " +maxValueInMap+ "  times");     // Print the key with max value
-                      maxappearchar = entry.getKey();
-                  }
-  
-              }
-              
-      }
-      return maxappearchar;
+    public char recurringChar(String inputString)
+    {   
+        HashMap<Character, Integer> charCountMap = new HashMap<>();
+         
+        char[] charArray = inputString.replaceAll("\\s+", "").toCharArray();
+         
+        for (char c : charArray) 
+        {
+            if (charCountMap.containsKey(c))
+            {
+                charCountMap.put(c, charCountMap.get(c)+1);
+            }
+            else
+            {
+                charCountMap.put(c, 1);
+            }
+        }
+         
+        Set<Entry<Character, Integer>> entrySet = charCountMap.entrySet();
+         
+        int maxCount = 0;
+         
+        char maxChar = 0;
+         
+        for (Entry<Character, Integer> entry : entrySet) 
+        {
+            if (entry.getValue() > maxCount)
+            {
+                maxCount = entry.getValue();
+                 
+                maxChar = entry.getKey();
+            }
+        }
+         
+        System.out.println("Input String : "+inputString);
+         
+        System.out.println("Maximum Occurring char and its count :");
+         
+        System.out.println(maxChar+" : "+maxCount);
+        return maxChar;
     }
+   
 }
