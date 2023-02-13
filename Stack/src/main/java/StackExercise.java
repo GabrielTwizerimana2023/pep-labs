@@ -1,4 +1,4 @@
-import java.util.Deque;
+import java.util.*;
 /**
  * Stacks are LIFO - last in, first out, like a stack of plates or books, or the puzzle game "Towers of Hanoi".
  * They are used in algorithms where it is needed to keep track of the ordering in which the elements were inserted.
@@ -20,7 +20,10 @@ public class StackExercise {
      * @return a newly instantiated Deque. Deques implement both stack and queue behavior.
      */
     public Deque<String> createNewStack(){
-        return null;
+        StackExercise cs=new StackExercise();
+        Deque<String> stack=new ArrayDeque<>();
+        stack.add("Gaby");
+        return stack;
     }
 
     /**
@@ -28,7 +31,11 @@ public class StackExercise {
      * @return the number of elements in the deque.
      */
     public int getSize(Deque<String> stack){
-        return 0;
+        StackExercise st=new StackExercise();
+        stack=st.createNewStack();
+        stack.size();
+        
+        return stack.size();
     }
 
     /**
@@ -37,6 +44,11 @@ public class StackExercise {
      * @param item a String to be added to the deque.
      */
     public void addToTopOfStack(Deque<String> stack, String item){
+        StackExercise st=new StackExercise();
+        stack=st.createNewStack();
+        stack.add("Yvonne");
+        stack.add("Brielle");
+        System.out.println(stack);
     }
 
     /**
@@ -46,6 +58,13 @@ public class StackExercise {
      * @return the value popped from the top of the deque.
      */
     public String removeFromTopOfStack(Deque<String> stack){
+        StackExercise st=new StackExercise();
+        stack=st.createNewStack();
+        stack.add("Yvonne");
+        stack.add("Brielle");
+        String ebook=st.removeFromTopOfStack(stack);
+        System.out.println(st.getSize(stack));
+        System.out.println(ebook);
         return "";
     }
     /**

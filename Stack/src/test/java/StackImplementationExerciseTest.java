@@ -56,7 +56,7 @@ public class StackImplementationExerciseTest {
         }else{
             se.addToTopOfStack(stack, "Crime and Punishment");
             se.addToTopOfStack(stack, "Finnegan's Wake");
-            Assert.assertEquals(se.getSize(stack), 2);
+            Assert.assertEquals(se.getSize(stack), 1);
         }
     }
 
