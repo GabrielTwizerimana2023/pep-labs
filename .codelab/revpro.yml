@@ -42,10 +42,10 @@
   :count_labs_total: 96
   :count_labs_passed: 0
   :count_tests_total: 361
-  :count_tests_passed: 6
+  :count_tests_passed: 2
 :progress_test:
   :count_tests_total: 361
-  :count_tests_passed: 6
+  :count_tests_passed: 2
   Start:
     :Week: 1
     :Order: 1
@@ -390,15 +390,15 @@
     :Order: 8
     :Type: lab
     :count_tests: 7
-    :count_tests_passed: 6
+    :count_tests_passed: 2
     :tests:
       createStackTest: 1
       getSizeTest1: 1
-      getSizeTest2: 1
+      getSizeTest2: 0
       addToTopOfStackTest1: 0
-      removeFromTopOfStackTest1: 1
-      removeFromTopOfStackTest2: 1
-      getTopOfStackWithoutRemovingTest1: 1
+      removeFromTopOfStackTest1: 0
+      removeFromTopOfStackTest2: 0
+      getTopOfStackWithoutRemovingTest1: 0
       StackImplementationExerciseTest: 0
   Casting:
     :Week: 3
