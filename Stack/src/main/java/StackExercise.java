@@ -22,8 +22,8 @@ public class StackExercise {
      */
    
     public Deque<String> createNewStack(){
-        Deque<String> stacks=new ArrayDeque<>();
-        return stacks;
+        Deque<String> deque=new ArrayDeque<String>();
+        return deque;
     }
 
     /**
