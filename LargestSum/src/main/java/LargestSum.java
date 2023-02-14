@@ -1,5 +1,8 @@
 
+import java.util.ArrayList;
 import java.util.List;
+
+import javax.xml.crypto.dsig.keyinfo.RetrievalMethod;
 
 public class LargestSum {
     /**
@@ -9,7 +12,8 @@ public class LargestSum {
      * @param nums a list of ints.
      * @return the largest possible sum of separate numbers from nums.
      */
-    public int bigSum(List<Integer> nums){
+    public int bigSum(ArrayList<Integer> nums){
+
         return 0;
-    }
+}
 }
