@@ -25,7 +25,7 @@ public class ObjectToBeComparedTest {
         obj1.val = 0;
         SampleClassC obj2 = new SampleClassC();
         obj2.val = 1;
-        Assert.assertTrue(obj1.compareTo(obj2) < 0);
+        Assert.assertTrue(obj1.compareTo2(obj2) < 0);
     }
     /**
      * If obj1 has a greater value than that of obj1, obj1.compareTo(obj2) should return a value greater than 0.
@@ -36,6 +36,6 @@ public class ObjectToBeComparedTest {
         obj1.val = 1;
         SampleClassC obj2 = new SampleClassC();
         obj2.val = 0;
-        Assert.assertTrue(obj1.compareTo(obj2) > 0);
+        Assert.assertTrue(obj1.compareTo1(obj2) > 0);
     }
 }
