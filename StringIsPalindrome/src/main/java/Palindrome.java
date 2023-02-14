@@ -12,7 +12,7 @@ public class Palindrome {
      * @return true if str is a palindrome, false otherwise.
      */
     public boolean pal(String str){
-        //str = "";
+      
         String reverseStr = "";
     
         int strLength = str.length();
