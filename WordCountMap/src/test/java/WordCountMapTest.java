@@ -1,4 +1,3 @@
-
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -71,5 +70,4 @@ public class WordCountMapTest {
             Assert.assertEquals(a3,e3);
         }
     }
-
 }
