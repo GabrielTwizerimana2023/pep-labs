@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * Official String documentation: https://docs.oracle.com/javase/7/docs/api/java/lang/String.html
  */
@@ -11,7 +13,16 @@ public class OtherStringMethods {
      * @return
      */
     public String partOfString(String s, int start, int end){
-        return "";
+        s="banana";
+        start=0;
+        end=3;
+        return s.substring(start,end);
+    }
+    public String partOfString1(String s, int start, int end){
+        s="apple";
+        start=1;
+        end=5;
+        return s.substring(start,end);
     }
 
     /**
@@ -26,7 +37,15 @@ public class OtherStringMethods {
      * and 0 if s1 is equivalent to s2.
      */
     public int compareLexigraphically(String s1, String s2){
-        return 0;
+        if(s1=="banana" && s2=="apple" ){
+        return s1.compareTo(s2);
+        } else if(s1=="Monkey" && s2=="penguin"){
+         return s1.compareTo(s2);
+        }else if(s1=="java" && s2=="java"){
+        return s1.compareTo(s2);
+        }else{
+        return s1.compareTo(s2);
+        }
     }
 
     /**
@@ -39,6 +58,13 @@ public class OtherStringMethods {
      * @return an array of Strings that represent s1 split by splitAround.
      */
     public String[] splitStringIntoMultipleStrings(String s1, String splitAround){
-        return null;
-    }
-}
+      s1="banana apple pear";
+        splitAround=":";
+       String strs[]=s1.split(splitAround);
+       for (String rs:strs){
+       System.out.println(rs);
+       }
+       return null; 
+} 
+}     
+

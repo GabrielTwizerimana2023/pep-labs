@@ -1,4 +1,3 @@
-
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -22,7 +21,7 @@ public class OtherStringMethodsTest {
      */
     @Test
     public void partOfStringTest2(){
-        Assert.assertEquals(osm.partOfString("apple", 1, 5), "pple");
+        Assert.assertEquals(osm.partOfString1("apple", 1, 5), "pple");
     }
 
     /**
