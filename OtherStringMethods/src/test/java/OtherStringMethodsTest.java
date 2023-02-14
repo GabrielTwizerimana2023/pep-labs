@@ -68,6 +68,6 @@ public class OtherStringMethodsTest {
         String input = "src.main.java";
         String splitAround = "\\.";
         String[] expected = {"src", "main", "java"};
-        Assert.assertArrayEquals(osm.splitStringIntoMultipleStrings(input, splitAround), expected);
+        Assert.assertArrayEquals(osm.splitStringIntoMultipleStrings1(input, splitAround), expected);
     }
 }
