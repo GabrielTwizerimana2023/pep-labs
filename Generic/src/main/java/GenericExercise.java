@@ -1,3 +1,5 @@
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * T here is a generic type.  It can stand in for any kind of object.
@@ -21,12 +23,16 @@ public class GenericExercise<T> {
      * @param in an Object that will be of type T at runtime.
      */
     public void loadGenericItem(T in){
-
+    GenericExercise<String> generic=new GenericExercise<String>();
+    generic.loadGenericItem("in");
+   
     }
     /**
      * @return T data. The type of Data will again be set when the GenericExercise object is created (at runtime).
      */
     public T returnGenericItem(){
+        
+        
         return null;
     }
 }
