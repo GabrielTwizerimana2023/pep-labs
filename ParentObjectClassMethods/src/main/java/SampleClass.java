@@ -57,7 +57,25 @@ public class SampleClass extends Object{
 
     //    implement a custom .equals(SampleClass other){} method here.
    public boolean equals(Object obj){
-    
+    if (this == obj) {    
+        return true;    
+    }    
+    if (obj instanceof String) {    
+        String anotherString = (String) obj;    
+        int n = value;    
+        if (n == anotherString.value.length) {    
+            char v1[] = value;    
+            char v2[] = anotherString.value;    
+            int i = 0;    
+            while (n-- != 0) {    
+                if (v1[i] != v2[i])    
+                        return false;    
+                i++;    
+            }    
+            return true;    
+        }    
+    }    
+    return false;    
     return b;
 
    }
