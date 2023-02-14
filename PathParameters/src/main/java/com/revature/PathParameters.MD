@@ -16,7 +16,7 @@ Path parameters are variables that are in the URL path. For example, Lets say we
 ```java
 app.get("/lastname/{name}", ctx -> {
     String lastName = ctx.pathParam("name");
-});
+}); 
 ```
 
 The curly braces in the url above defines a variable. A client can now send a request to the above endpoint in the 
