@@ -23,16 +23,14 @@ public class GenericExercise<T> {
      * @param in an Object that will be of type T at runtime.
      */
     public void loadGenericItem(T in){
-    GenericExercise<String> generic=new GenericExercise<String>();
-    generic.loadGenericItem("in");
-   
+        data=in;
+     this.data=in;
     }
     /**
      * @return T data. The type of Data will again be set when the GenericExercise object is created (at runtime).
      */
     public T returnGenericItem(){
         
-        
-        return null;
+        return this.data;
     }
 }
