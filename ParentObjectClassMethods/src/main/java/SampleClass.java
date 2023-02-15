@@ -53,7 +53,10 @@
  */
 public class SampleClass extends Object{
     public int a;
+ 
     public boolean b;
+
+   
 
     
 
@@ -67,11 +70,13 @@ public class SampleClass extends Object{
     }
 }
    
-  
      //    implement a custom .toString(){} method here.
-     public String toString(){
-       
-        return "";
+    /*  public String toString(){
+        String buildingstring="";
+        String.valueOf(a);
+         buildingstring=a+"";
+         return "";
+*/
+        
    }
  
-}
