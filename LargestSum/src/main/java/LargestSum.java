@@ -20,7 +20,8 @@ public class LargestSum {
        int target=7;
        return target;
         }
-        public int bigSum1(List<Integer> nums){
+
+    public int bigSum1(List<Integer> nums){
         
             nums.add(0);
             nums.add(0);
@@ -30,7 +31,8 @@ public class LargestSum {
            int target=0;
            return target;
             }
-            public int bigSum2(List<Integer> nums){
+
+    public int bigSum2(List<Integer> nums){
         
                 nums.add(0);
                 nums.add(4);
@@ -40,7 +42,8 @@ public class LargestSum {
                int target=9;
                return target;
                 }
-public int bigSum3(List<Integer> nums){
+
+    public int bigSum3(List<Integer> nums){
         
                     nums.add(5);
                     nums.add(4);
