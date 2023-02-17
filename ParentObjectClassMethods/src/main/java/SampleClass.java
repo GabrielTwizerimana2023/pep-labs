@@ -51,14 +51,32 @@
  * In the future (or if you get stuck), IDE's are generally capable of automatically generating boilerplate code
  * like toString, equals, constructors, getters, setters, if you can find the menu to do so.
  */
-public class SampleClass {
+public class SampleClass extends Object{
     public int a;
+ 
     public boolean b;
 
-    //    implement a custom .equals(SampleClass other){} method here.
-
-
-    //    implement a custom .toString(){} method here.
+   
 
     
+
+    //    implement a custom .equals(SampleClass other){} method here.
+   public boolean equals(Object obj){
+    if(obj.equals(b)){
+    b=true;
+    return b;
+    }else{
+    return false;
+    }
 }
+   
+     //    implement a custom .toString(){} method here.
+    /*  public String toString(){
+        String buildingstring="";
+        String.valueOf(a);
+         buildingstring=a+"";
+         return "";
+*/
+        
+   }
+ 
