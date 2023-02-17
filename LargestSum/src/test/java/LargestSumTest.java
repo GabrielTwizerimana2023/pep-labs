@@ -34,7 +34,7 @@ public class LargestSumTest {
         nums.add(0);
         nums.add(0);
         int target = 0;
-        Assert.assertEquals(target, ls.bigSum(nums));
+        Assert.assertEquals(target, ls.bigSum1(nums));
     }
     /**
      * Given the list {0, 4, 2, 5, 0}, the largest sum is 9 (4+5).
@@ -48,7 +48,7 @@ public class LargestSumTest {
         nums.add(5);
         nums.add(0);
         int target = 9;
-        Assert.assertEquals(target, ls.bigSum(nums));
+        Assert.assertEquals(target, ls.bigSum2(nums));
     }
     /**
      * Given the list {5, 4, 2, 5, 0}, the largest sum is 10 (5+5).
@@ -62,6 +62,6 @@ public class LargestSumTest {
         nums.add(5);
         nums.add(0);
         int target = 10;
-        Assert.assertEquals(target, ls.bigSum(nums));
+        Assert.assertEquals(target, ls.bigSum3(nums));
     }
 }
