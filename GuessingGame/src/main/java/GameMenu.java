@@ -22,10 +22,14 @@ public class GameMenu {
             double guessNumber = userInputScanner.nextDouble();
             boolean correct = gameService.checkGuess(guessNumber);
             if(correct){
+                gameService.checkGuess(guessNumber);
+                System.out.println(gameService.checkGuess(guessNumber));
                 System.out.println("You got the secret number! Thanks for playing");
-                playing = false;
+                playing =false;
+
             }else{
-                System.out.println("Incorrect!");
+                System.out.println(gameService.checkGuess(guessNumber));
+               // System.out.println("Incorrect!");
             }
         }
     }
